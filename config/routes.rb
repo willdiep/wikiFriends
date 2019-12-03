@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :article_tags
   resources :tags
-  resources :saved_articles
-  resources :articles
-  resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :articles, only: [:index, :show]
+  resources :users, except: :new
+
+  root "users#home"
+  get "/users/:id/my_articles", to: "users#my_articles"
+  get "/signup", to: "users#new"
+  get "/login", to: "sessions#new"
+  post "/sessions", to: "sessions#create"
+  delete "/sessions", to: "sessions#destroy"
 end
