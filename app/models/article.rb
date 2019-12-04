@@ -4,6 +4,10 @@ class Article < ApplicationRecord
     has_many :article_tags
     has_many :tags, through: :article_tags
 
+    accepts_nested_attributes_for :saved_articles
+
+
+
     def self.search(search)
         response = RestClient.get("https://en.wikipedia.org/w/api.php?action=opensearch&search=#{search}&limit=5&format=json")
         results_hash = JSON.parse(response)
@@ -14,4 +18,6 @@ class Article < ApplicationRecord
             article.save
         end
     end
+
+
 end

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    before_action :require_login
+    skip_before_action :require_login, only: [:create, :new]
     
     def index
         @users = User.all
@@ -47,6 +49,10 @@ class UsersController < ApplicationController
 
     def user_params
         params.require(:user).permit(:username, :first_name, :last_name, :password, :password_confirmation)
+    end
+
+    def require_login
+        return head(:forbidden) unless session.include? :user_id
     end
 
 end
