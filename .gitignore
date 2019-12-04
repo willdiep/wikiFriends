@@ -34,3 +34,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+
+log/development.log
+tmp/cache/bootsnap-load-path-cache
