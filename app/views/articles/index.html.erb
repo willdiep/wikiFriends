@@ -1,9 +1,10 @@
-<%= form_with(url: "/search", method: "get") do %>
+<%= form_with(url: "/search", method: "get", local: true) do %>
     <%= label_tag(:q, "Search Articles:") %>
     <%= text_field_tag(:q) %>
     <%= submit_tag("Search") %>
   <% end %>
 
+  
   <ul>
     <% @articles.each do |article| %>
       
@@ -11,3 +12,4 @@
       <br>
     <% end %>
   </ul>
+
