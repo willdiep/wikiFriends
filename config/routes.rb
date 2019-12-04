@@ -12,8 +12,5 @@ Rails.application.routes.draw do
   delete "/sessions", to: "sessions#destroy"
   get "/search", to: "articles#index"
 
-  patch "/articles/:id", to: "articles#save"
-
-  
-
+  post "/saved_articles", to: "saved_articles#create"
 end
