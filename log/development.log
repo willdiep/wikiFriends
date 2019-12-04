@@ -8216,3 +8216,1066 @@ FOREIGN KEY ("tag_id")
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-12-04 14:35:07 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 6.5ms | Allocations: 798)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 71.5ms | ActiveRecord: 0.0ms | Allocations: 10831)
+
+
+Started GET "/login" for ::1 at 2019-12-04 14:35:11 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 5751)
+
+
+Started GET "/signup" for ::1 at 2019-12-04 14:35:14 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 26.3ms | Allocations: 3359)
+  Rendered users/new.html.erb within layouts/application (Duration: 28.8ms | Allocations: 3665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 40.7ms | ActiveRecord: 1.5ms | Allocations: 15369)
+
+
+Started POST "/users" for ::1 at 2019-12-04 14:35:27 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"w+0tWIhVZkorjjEFkHK19eJlnTdej9mW4g+HQeuQCRpTvbBBEPKjQkzTb5Y+ImBi6yfm1o7njZcsCoT4BS/CZQ==", "user"=>{"username"=>"dawntime", "first_name"=>"Dawn", "last_name"=>"Cronin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "dawntime"], ["password_digest", "$2a$12$NpO.lQ5t0mttR7w2wxa/YeT1h6ILK4uNYhXyqm/LR61aa4LagxuFC"], ["first_name", "Dawn"], ["last_name", "Cronin"], ["created_at", "2019-12-04 22:35:27.659277"], ["updated_at", "2019-12-04 22:35:27.659277"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 272ms (ActiveRecord: 2.8ms | Allocations: 3429)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 14:35:27 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 45.2ms | ActiveRecord: 0.3ms | Allocations: 5578)
+
+
+Started GET "/articles" for ::1 at 2019-12-04 14:35:36 -0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 12.4ms | ActiveRecord: 1.2ms | Allocations: 8867)
+
+
+Started GET "/search?q=ham&commit=Search" for ::1 at 2019-12-04 14:35:40 -0800
+Processing by ArticlesController#index as HTML
+  Parameters: {"q"=>"ham", "commit"=>"Search"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Ham"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Ham"], ["created_at", "2019-12-04 22:35:40.384742"], ["updated_at", "2019-12-04 22:35:40.384742"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamilton (musical)"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hamilton (musical)"], ["created_at", "2019-12-04 22:35:40.391464"], ["updated_at", "2019-12-04 22:35:40.391464"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamlet"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hamlet"], ["created_at", "2019-12-04 22:35:40.400090"], ["updated_at", "2019-12-04 22:35:40.400090"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamburg"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hamburg"], ["created_at", "2019-12-04 22:35:40.411716"], ["updated_at", "2019-12-04 22:35:40.411716"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamas"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hamas"], ["created_at", "2019-12-04 22:35:40.419004"], ["updated_at", "2019-12-04 22:35:40.419004"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.6ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Ham"], ["short_desc", "Ham is pork from a leg cut that has been preserved by wet or dry curing, with or without smoking. As a processed meat, the term \"ham\" includes both whole cuts of meat and ones that have been mechanically formed."], ["updated_at", "2019-12-04 22:35:40.423751"], ["id", 1]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.6ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Hamilton_(musical)"], ["short_desc", "Hamilton: An American Musical is a sung-and-rapped through 2015 musical about the life of American Founding Father Alexander Hamilton, with music, lyrics and book by Lin-Manuel Miranda, inspired by the 2004 biography Alexander Hamilton by historian Ron Chernow."], ["updated_at", "2019-12-04 22:35:40.429827"], ["id", 2]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Hamlet"], ["short_desc", "The Tragedy of Hamlet, Prince of Denmark, often shortened to Hamlet (), is a tragedy written by William Shakespeare sometime between 1599 and 1602. Set in Denmark, the play depicts Prince Hamlet and his revenge against his uncle, Claudius, who has murdered Hamlet's father in order to seize his throne and marry Hamlet's mother."], ["updated_at", "2019-12-04 22:35:40.436194"], ["id", 3]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Hamburg"], ["short_desc", "Hamburg (English: , German: [ˈhambʊʁk] (listen), locally also [ˈhambʊɪ̯ç] (listen) [ˈhambɔːχ]; Low Saxon: Hamborg), officially the Free and Hanseatic City of Hamburg (German: Freie und Hansestadt Hamburg; Low Saxon: Friee un Hansestadt Hamborg), is the second-largest city in Germany after Berlin and 8th largest city in the European Union with a population of over 1.84 million."], ["updated_at", "2019-12-04 22:35:40.441834"], ["id", 4]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.6ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Hamas"], ["short_desc", "Hamas (Arabic: حماس Ḥamās, an acronym of حركة المقاومة الاسلامية Ḥarakat al-Muqāwamah al-ʾIslāmiyyah [Islamic Resistance Movement]) is a Palestinian Sunni-Islamic fundamentalist militant organization."], ["updated_at", "2019-12-04 22:35:40.447189"], ["id", 5]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 359)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 421ms (Views: 9.4ms | ActiveRecord: 21.3ms | Allocations: 44493)
+
+
+Started GET "/search?q=PETA&commit=Search" for ::1 at 2019-12-04 14:35:47 -0800
+Processing by ArticlesController#index as HTML
+  Parameters: {"q"=>"PETA", "commit"=>"Search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "PETA"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "PETA"], ["created_at", "2019-12-04 22:35:47.939404"], ["updated_at", "2019-12-04 22:35:47.939404"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Petah Tikva"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Petah Tikva"], ["created_at", "2019-12-04 22:35:47.946960"], ["updated_at", "2019-12-04 22:35:47.946960"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Peter I of Serbia"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Peter I of Serbia"], ["created_at", "2019-12-04 22:35:47.954161"], ["updated_at", "2019-12-04 22:35:47.954161"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Petal"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Petal"], ["created_at", "2019-12-04 22:35:47.964790"], ["updated_at", "2019-12-04 22:35:47.964790"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Peter II of Yugoslavia"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Peter II of Yugoslavia"], ["created_at", "2019-12-04 22:35:47.973255"], ["updated_at", "2019-12-04 22:35:47.973255"]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/PETA"], ["short_desc", ""], ["updated_at", "2019-12-04 22:35:47.978932"], ["id", 6]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Petah_Tikva"], ["short_desc", "Petah Tikva (Hebrew: פֶּתַח תִּקְוָה, IPA: [ˌpe.taχ ˈtik.va], \"Opening of Hope\"), also known as Em HaMoshavot (\"Mother of the Moshavot\"), is a city in the Central District of Israel, 10.6 km (6.59 mi) east of Tel Aviv."], ["updated_at", "2019-12-04 22:35:47.983812"], ["id", 7]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.7ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Peter_I_of_Serbia"], ["short_desc", "Peter I (Serbian: Petar/Петар; 11 July [O.S. 29 June] 1844 – 16 August 1921) reigned as the last King of Serbia (1903–1918) and as the first King of the Serbs, Croats and Slovenes (1918–1921)."], ["updated_at", "2019-12-04 22:35:47.988595"], ["id", 8]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Petal"], ["short_desc", "Petals are modified leaves that surround the reproductive parts of flowers. They are often brightly colored or unusually shaped to attract pollinators."], ["updated_at", "2019-12-04 22:35:47.994693"], ["id", 9]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Peter_II_of_Yugoslavia"], ["short_desc", "Peter II (Serbo-Croatian: Petar / Петар; 6 September 1923 – 3 November 1970) was the last King of Yugoslavia, reigning from 1934 to 1945. He was the last reigning member of the Karađorđević dynasty which came to prominence in the early 19th century."], ["updated_at", "2019-12-04 22:35:47.999259"], ["id", 10]]
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:18:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 245)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 327ms (Views: 8.5ms | ActiveRecord: 20.0ms | Allocations: 36381)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 14:35:53 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 31.5ms | Allocations: 914)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 39.1ms | ActiveRecord: 2.2ms | Allocations: 10825)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 14:37:26 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 265.7ms | Allocations: 77729)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 0.3ms | Allocations: 79748)
+
+
+  
+ActionView::Template::Error (undefined method `saved_articles_path' for #<#<Class:0x00007fc989adbb00>:0x00007fc98955adc0>):
+    11: <iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+    12: </iframe>
+    13: 
+    14: <%= form_for @saved_article do |f| %>
+    15:     <%= f.text_area :note, placeholder: "Write your note about this article here" %>
+    16: 
+    17:     <%= f.submit "Save to My Articles"%>
+  
+app/views/articles/show.html.erb:14
+Started GET "/articles/6" for ::1 at 2019-12-04 14:38:57 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 392)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 21.8ms | ActiveRecord: 5.8ms | Allocations: 17727)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:39:10 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"wqHLsJ+KrxyeMR6ujku8sCocrUfNb4QYz7kce8fRma/Pb5GxKlivPla5lboPzD2vbD3U3Plo+aKSPYkRd7ty+w==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+No template found for SavedArticlesController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 1959)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 14:42:52 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 390)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 28.8ms | ActiveRecord: 2.3ms | Allocations: 17328)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:43:00 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2688)
+
+
+  
+NameError (uninitialized constant SavedArticlesController::Session):
+  
+app/controllers/saved_articles_controller.rb:6:in `create'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:43:18 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.5ms | Allocations: 9230)
+
+
+  
+NameError (uninitialized constant SavedArticle::UserId):
+  
+app/controllers/saved_articles_controller.rb:6:in `create'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:43:21 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1795)
+
+
+  
+NameError (uninitialized constant SavedArticle::UserId):
+  
+app/controllers/saved_articles_controller.rb:6:in `create'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:44:38 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.5ms | Allocations: 13495)
+
+
+  
+NoMethodError (undefined method `user=' for #<SavedArticle:0x00007fc98aba5300>
+Did you mean?  user_id=):
+  
+app/controllers/saved_articles_controller.rb:6:in `create'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:45:09 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.7ms | Allocations: 7352)
+
+
+  
+NameError (uninitialized constant SavedArticle::UserId):
+  
+app/controllers/saved_articles_controller.rb:6:in `create'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:46:04 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.7ms | Allocations: 7401)
+
+
+  
+NameError (uninitialized constant SavedArticlesController::Params):
+  
+app/controllers/saved_articles_controller.rb:7:in `create'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:46:30 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000articles/:id
+Completed 302 Found in 69ms (ActiveRecord: 2.5ms | Allocations: 16657)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:46:35 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000articles/:id
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1873)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:46:56 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles/:id
+Completed 302 Found in 78ms (ActiveRecord: 4.0ms | Allocations: 15532)
+
+
+Started GET "/articles/:id" for ::1 at 2019-12-04 14:46:56 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+Completed 404 Not Found in 12ms (ActiveRecord: 2.0ms | Allocations: 2097)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=:id):
+  
+app/controllers/articles_controller.rb:13:in `show'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:47:23 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 79111ms (ActiveRecord: 2.4ms | Allocations: 361343)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/saved_articles_controller.rb:9:in `create'
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:52:36 -0800
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"UNCWLwV+9I6GntTBKnlkq0mvQzRYGOim60b+1EtptSBdHswusKz0rE4WX9Wr/uW0D446r2wflRy2wmu++wNedA==", "saved_article"=>{"note"=>"I'm unsure about PETA"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 319855ms (ActiveRecord: 15.0ms | Allocations: 1782127)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/saved_articles_controller.rb:8:in `create'
+Started GET "/search?q=ham&commit=Search" for ::1 at 2019-12-04 14:58:15 -0800
+Processing by ArticlesController#index as HTML
+  Parameters: {"q"=>"ham", "commit"=>"Search"}
+  [1m[36mArticle Load (8.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Ham"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamilton (musical)"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (2.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamlet"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (3.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamburg"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Hamas"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (14.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 71.4ms | Allocations: 318787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1489ms (Views: 318.8ms | ActiveRecord: 50.8ms | Allocations: 6804852)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 14:58:31 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 51.2ms | Allocations: 317760)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 279ms (Views: 193.0ms | ActiveRecord: 2.1ms | Allocations: 1753760)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 14:58:43 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"jnRmS9dN23of2FK1XH35m4SlKZOH8nxiRzw5B/BtgsCDujxKYp/bWNdQ2aHd+niEwoRQCLP1AdgauKxtQAdplA==", "saved_article"=>{"note"=>"ew", "article_id"=>"6"}, "commit"=>"Save to My Articles"}
+Completed 500 Internal Server Error in 100127ms (ActiveRecord: 0.0ms | Allocations: 397016)
+
+
+Started GET "/search?q=PETA&commit=Search" for ::1 at 2019-12-04 15:00:23 -0800
+Started GET "/" for ::1 at 2019-12-04 15:00:23 -0800
+Started GET "/articles/6" for ::1 at 2019-12-04 15:00:23 -0800
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"q"=>"PETA", "commit"=>"Search"}
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (4.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 183.9ms | Allocations: 581681)
+  [1m[36mArticle Load (2.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "PETA"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (4.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Petah Tikva"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Peter I of Serbia"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (7.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Petal"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Peter II of Yugoslavia"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:14:in `block in search'
+  [1m[36mArticle Load (8.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 151285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6530ms (Views: 6126.3ms | ActiveRecord: 4.4ms | Allocations: 32519420)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 15:00:33 -0800
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9710ms (Views: 4265.3ms | ActiveRecord: 26.5ms | Allocations: 49192365)
+
+
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 41.0ms | Allocations: 101955)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 676ms (Views: 531.6ms | ActiveRecord: 0.0ms | Allocations: 2085411)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 51.4ms | Allocations: 315263)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 858ms (Views: 214.7ms | ActiveRecord: 34.1ms | Allocations: 5213854)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 15:01:02 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"alv1amDRxNmEW1fagFpO58I9VOjsessucW7ZsZdCmTBnla9r1QPE+0zT3M4B3c/4hBwtc9h9tpQs6kzbJyhyZA==", "saved_article"=>{"note"=>"Peta is silly", "article_id"=>"6"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[36mSavedArticle Create (2.4ms)[0m  [1m[32mINSERT INTO "saved_articles" ("user_id", "article_id", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 6], ["note", "Peta is silly"], ["created_at", "2019-12-04 23:01:03.096744"], ["updated_at", "2019-12-04 23:01:03.096744"]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles/:id
+Completed 302 Found in 682ms (ActiveRecord: 29.9ms | Allocations: 3748281)
+
+
+Started GET "/articles/:id" for ::1 at 2019-12-04 15:01:03 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+Completed 404 Not Found in 67ms (ActiveRecord: 1.4ms | Allocations: 393059)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=:id):
+  
+app/controllers/articles_controller.rb:13:in `show'
+Started POST "/saved_articles" for ::1 at 2019-12-04 15:02:12 -0800
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"alv1amDRxNmEW1fagFpO58I9VOjsessucW7ZsZdCmTBnla9r1QPE+0zT3M4B3c/4hBwtc9h9tpQs6kzbJyhyZA==", "saved_article"=>{"note"=>"Peta is silly", "article_id"=>"6"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[36mArticle Load (10.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[36mSavedArticle Create (15.6ms)[0m  [1m[32mINSERT INTO "saved_articles" ("user_id", "article_id", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 6], ["note", "Peta is silly"], ["created_at", "2019-12-04 23:02:18.808985"], ["updated_at", "2019-12-04 23:02:18.808985"]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles/params[:saved_article][:article_id]
+Completed 302 Found in 2459ms (ActiveRecord: 199.0ms | Allocations: 7588922)
+
+
+Started GET "/articles/params[:saved_article][:article_id]" for ::1 at 2019-12-04 15:02:19 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"params[:saved_article][:article_id]"}
+  [1m[36mArticle Load (8.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+Completed 404 Not Found in 111ms (ActiveRecord: 8.7ms | Allocations: 534635)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=params[:saved_article][:article_id]):
+  
+app/controllers/articles_controller.rb:13:in `show'
+Started POST "/saved_articles" for ::1 at 2019-12-04 15:02:31 -0800
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"alv1amDRxNmEW1fagFpO58I9VOjsessucW7ZsZdCmTBnla9r1QPE+0zT3M4B3c/4hBwtc9h9tpQs6kzbJyhyZA==", "saved_article"=>{"note"=>"Peta is silly", "article_id"=>"6"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[36mSavedArticle Create (3.2ms)[0m  [1m[32mINSERT INTO "saved_articles" ("user_id", "article_id", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 6], ["note", "Peta is silly"], ["created_at", "2019-12-04 23:02:36.443594"], ["updated_at", "2019-12-04 23:02:36.443594"]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles/6
+Completed 302 Found in 1363ms (ActiveRecord: 66.3ms | Allocations: 7588439)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 15:02:36 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (8.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 51.7ms | Allocations: 291272)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1198ms (Views: 457.1ms | ActiveRecord: 45.7ms | Allocations: 5407356)
+
+
+Started GET "/articles/1" for ::1 at 2019-12-04 15:03:54 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 13.6ms | Allocations: 56478)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 1.7ms | Allocations: 809985)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> 
+    <%= @article.title %>
+</h1>
+
+<p>
+    <%= @article.short_desc %>
+</p>
+
+<%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
+
+<iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+</iframe>
+<% @saved_article.article_id = @article.id %>
+<%= form_for @saved_article do |f| %>
+    <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
+    <%= f.label "Current Article ID: UNEDITABLE" 
+    <%= f.number_field :article_id, :readonly => true%> <br>
+
+    <%= f.submit "Save to My Articles"%>
+
+<% end %>
+):
+1:    <h1> 
+2:        <%= @article.title %>
+3:    </h1>
+4:    
+5:    <p>
+6:        <%= @article.short_desc %>
+7:    </p>
+8:    
+9:    <%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
+10:    
+11:    <iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+12:    </iframe>
+13:    <% @saved_article.article_id = @article.id %>
+14:    <%= form_for @saved_article do |f| %>
+15:        <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
+16:        <%= f.label "Current Article ID: UNEDITABLE" 
+17:        <%= f.number_field :article_id, :readonly => true%> <br>
+18:    
+19:        <%= f.submit "Save to My Articles"%>
+20:    
+21:    <% end %>
+  
+app/views/articles/show.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/articles/show.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/articles/show.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/articles/show.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/articles/show.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/articles/show.html.erb:17: syntax error, unexpected '<', expecting ')'
+Started GET "/articles/6" for ::1 at 2019-12-04 15:04:04 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (8.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+Started GET "/articles/1" for ::1 at 2019-12-04 15:04:07 -0800
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendered articles/show.html.erb within layouts/application (Duration: 100.1ms | Allocations: 464349)
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (8.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 47.3ms | Allocations: 322587)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13797ms (Views: 13115.8ms | ActiveRecord: 8.6ms | Allocations: 78055577)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10763ms (Views: 10406.7ms | ActiveRecord: 8.1ms | Allocations: 60856985)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 15:09:36 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (9.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 70575)
+Completed 500 Internal Server Error in 677ms (ActiveRecord: 41.0ms | Allocations: 4509399)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> 
+    <%= @article.title %>
+</h1>
+
+<p>
+    <%= @article.short_desc %>
+</p>
+
+<%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
+
+<iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+</iframe>
+<% if !@article.users.include?(current_user)
+    <% @saved_article.article_id = @article.id %>
+    <%= form_for @saved_article do |f| %>
+        <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
+        <%= f.label "Current Article ID:" %>
+        <%= f.number_field :article_id, :readonly => true%> <br>
+
+        <%= f.submit "Save to My Articles"%>
+
+    <% end %>
+<% end %>
+<ul>
+<% @article.saved_articles.each do |sa| %>
+    <li> <%= sa.note %> </li>
+    <%end %>
+</ul>
+):
+1:    <h1> 
+2:        <%= @article.title %>
+3:    </h1>
+4:    
+5:    <p>
+6:        <%= @article.short_desc %>
+7:    </p>
+8:    
+9:    <%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
+10:    
+11:    <iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+12:    </iframe>
+13:    <% if !@article.users.include?(current_user)
+14:        <% @saved_article.article_id = @article.id %>
+15:        <%= form_for @saved_article do |f| %>
+16:            <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
+17:            <%= f.label "Current Article ID:" %>
+18:            <%= f.number_field :article_id, :readonly => true%> <br>
+19:    
+20:            <%= f.submit "Save to My Articles"%>
+21:    
+22:        <% end %>
+23:    <% end %>
+24:    <ul>
+25:    <% @article.saved_articles.each do |sa| %>
+26:        <li> <%= sa.note %> </li>
+27:        <%end %>
+28:    </ul>
+  
+app/views/articles/show.html.erb:14: syntax error, unexpected '<'
+app/views/articles/show.html.erb:14: syntax error, unexpected '=', expecting end
+app/views/articles/show.html.erb:14: syntax error, unexpected '<'
+app/views/articles/show.html.erb:14: syntax error, unexpected '=', expecting end
+app/views/articles/show.html.erb:14: syntax error, unexpected '<'
+app/views/articles/show.html.erb:14: syntax error, unexpected '=', expecting end
+app/views/articles/show.html.erb:14: syntax error, unexpected '<'
+app/views/articles/show.html.erb:14: syntax error, unexpected '=', expecting end
+app/views/articles/show.html.erb:14: syntax error, unexpected '<'
+app/views/articles/show.html.erb:14: syntax error, unexpected '=', expecting end
+app/views/articles/show.html.erb:14: syntax error, unexpected '<'
+app/views/articles/show.html.erb:14: syntax error, unexpected '=', expecting end
+Started GET "/articles/6" for ::1 at 2019-12-04 15:10:40 -0800
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (8.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+Started GET "/articles/6" for ::1 at 2019-12-04 15:10:47 -0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (6.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (7.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 6], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 6], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (2.0ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 6]]
+  [1m[36mSavedArticle Load (2.5ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:24
+  ↳ app/views/articles/show.html.erb:24
+  Rendered articles/show.html.erb within layouts/application (Duration: 11177.8ms | Allocations: 57304771)
+  Rendered articles/show.html.erb within layouts/application (Duration: 18554.0ms | Allocations: 96176235)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12700ms (Views: 11597.2ms | ActiveRecord: 63.2ms | Allocations: 63793728)
+
+
+Completed 200 OK in 20331ms (Views: 19526.5ms | ActiveRecord: 156.3ms | Allocations: 101313666)
+
+
+Started GET "/articles/6" for ::1 at 2019-12-04 15:13:08 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 73100)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 1.9ms | Allocations: 829285)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> 
+    <%= @article.title %>
+</h1>
+
+<p>
+    <%= @article.short_desc %>
+</p>
+
+<%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
+
+<iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+</iframe>
+<% if !@article.users.include?(current_user) %>
+    <% @saved_article.article_id = @article.id %>
+    <%= form_for @saved_article do |f| %>
+        <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
+        <%= f.label "Current Article ID:" %>
+        <%= f.number_field :article_id, :readonly => true%> <br>
+
+        <%= f.submit "Save to My Articles"%>
+    <% end %>
+<% end %>
+<ul>
+<% @article.saved_articles.each do |sa| %>
+    <li> <%="#{sa.user.username} says #{sa.note} %> </li>
+    <%end %>
+</ul>
+):
+1:    <h1> 
+2:        <%= @article.title %>
+3:    </h1>
+4:    
+5:    <p>
+6:        <%= @article.short_desc %>
+7:    </p>
+8:    
+9:    <%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
+10:    
+11:    <iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+12:    </iframe>
+13:    <% if !@article.users.include?(current_user) %>
+14:        <% @saved_article.article_id = @article.id %>
+15:        <%= form_for @saved_article do |f| %>
+16:            <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
+17:            <%= f.label "Current Article ID:" %>
+18:            <%= f.number_field :article_id, :readonly => true%> <br>
+19:    
+20:            <%= f.submit "Save to My Articles"%>
+21:        <% end %>
+22:    <% end %>
+23:    <ul>
+24:    <% @article.saved_articles.each do |sa| %>
+25:        <li> <%="#{sa.user.username} says #{sa.note} %> </li>
+26:        <%end %>
+27:    </ul>
+  
+app/views/articles/show.html.erb:29: unterminated string meets end of file
+app/views/articles/show.html.erb:29: syntax error, unexpected end-of-input, expecting ')'
+app/views/articles/show.html.erb:29: unterminated string meets end of file
+app/views/articles/show.html.erb:29: syntax error, unexpected end-of-input, expecting ')'
+app/views/articles/show.html.erb:29: unterminated string meets end of file
+app/views/articles/show.html.erb:29: syntax error, unexpected end-of-input, expecting ')'
+app/views/articles/show.html.erb:29: unterminated string meets end of file
+app/views/articles/show.html.erb:29: syntax error, unexpected end-of-input, expecting ')'
+app/views/articles/show.html.erb:29: unterminated string meets end of file
+app/views/articles/show.html.erb:29: syntax error, unexpected end-of-input, expecting ')'
+app/views/articles/show.html.erb:29: unterminated string meets end of file
+app/views/articles/show.html.erb:29: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/articles/6" for ::1 at 2019-12-04 15:13:29 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (3.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 6], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (7.7ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:24
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:25
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:25
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:25
+  Rendered articles/show.html.erb within layouts/application (Duration: 3695.6ms | Allocations: 21379903)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9824ms (Views: 9077.2ms | ActiveRecord: 16.4ms | Allocations: 49819541)
+
+
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSavedArticle Load (0.3ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ? ORDER BY "saved_articles"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mSavedArticle Destroy (2.6ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 1]]
+  [1m[36mSavedArticle Load (0.5ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ? ORDER BY "saved_articles"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mSavedArticle Destroy (2.4ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 2]]
+Started GET "/articles/6" for ::1 at 2019-12-04 15:14:46 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 6], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (2.7ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:24
+  [1m[36mCACHE User Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:25
+  Rendered articles/show.html.erb within layouts/application (Duration: 211.9ms | Allocations: 1248902)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 459ms (Views: 371.4ms | ActiveRecord: 10.3ms | Allocations: 2648104)
+
+
+Started GET "/articles/2" for ::1 at 2019-12-04 15:20:53 -0800
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (7.5ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered articles/show.html.erb within layouts/application (Duration: 472.9ms | Allocations: 2965982)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 749ms (Views: 652.7ms | ActiveRecord: 18.7ms | Allocations: 4574740)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 15:21:45 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"jWUn6kwBOtzHzaaXfwL0ohUJEIQaVnoJHw3mzAGwuGeAq33r+dM6/g9FLYP+hXW9UyhpHy5RB7NCiXOmsdpTMw==", "saved_article"=>{"note"=>"I've never seen hamilton", "article_id"=>"2"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[36mSavedArticle Create (3.5ms)[0m  [1m[32mINSERT INTO "saved_articles" ("user_id", "article_id", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 2], ["note", "I've never seen hamilton"], ["created_at", "2019-12-04 23:21:46.298420"], ["updated_at", "2019-12-04 23:21:46.298420"]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 376ms (ActiveRecord: 11.8ms | Allocations: 2025870)
+
+
+Started GET "/articles/2" for ::1 at 2019-12-04 15:21:46 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (7.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (9.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:25
+  Rendered articles/show.html.erb within layouts/application (Duration: 298.1ms | Allocations: 1666727)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 580ms (Views: 454.3ms | ActiveRecord: 21.0ms | Allocations: 3235529)
+
+
+Started GET "/articles/3" for ::1 at 2019-12-04 15:22:01 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (8.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (1.8ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:23
+  Rendered articles/show.html.erb within layouts/application (Duration: 198.2ms | Allocations: 1192751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 548ms (Views: 456.0ms | ActiveRecord: 14.7ms | Allocations: 2795384)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-04 15:22:20 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"cNpgeUiv913p27+Dvc1gt0U6wL4cqWcTqpr0njOYU199FDp4/X33fyFTNJc8SuGoAxu5JSiuGqn3HmH0g/K4Cw==", "saved_article"=>{"note"=>"I don't like Shakespeare", "article_id"=>"3"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[36mArticle Load (7.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[36mSavedArticle Create (2.3ms)[0m  [1m[32mINSERT INTO "saved_articles" ("user_id", "article_id", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 3], ["note", "I don't like Shakespeare"], ["created_at", "2019-12-04 23:22:20.274781"], ["updated_at", "2019-12-04 23:22:20.274781"]]
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 292ms (ActiveRecord: 14.6ms | Allocations: 1870113)
+
+
+Started GET "/articles/3" for ::1 at 2019-12-04 15:22:20 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (2.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (7.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (7.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:23
+  [1m[36mCACHE User Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered articles/show.html.erb within layouts/application (Duration: 208.2ms | Allocations: 1293501)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 445ms (Views: 335.9ms | ActiveRecord: 19.9ms | Allocations: 2810667)
+
+
+Started GET "/articles/4" for ::1 at 2019-12-04 15:24:47 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (8.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mSavedArticle Load (9.3ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:23
+  Rendered articles/show.html.erb within layouts/application (Duration: 216.0ms | Allocations: 1135372)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 496ms (Views: 395.7ms | ActiveRecord: 27.5ms | Allocations: 2534623)
+
+
