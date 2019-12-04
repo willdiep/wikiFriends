@@ -8108,3 +8108,737 @@ Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 1697)
 >>>>>>> search
 
 
+Started GET "/login" for ::1 at 2019-12-04 11:34:41 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 10920)
+
+
+Started POST "/sessions" for ::1 at 2019-12-04 11:34:45 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"dy4yD0OchGrJ60SGj4OlZTWgf6036KW2i/HdiXGtzMWAdOw9nXZ5sV4GnfQ/U9KR6LVRyDkca6RrjH50M8fCbw==", "username"=>"will", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "will"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 270ms (ActiveRecord: 1.4ms | Allocations: 8172)
+
+
+Started GET "/users/2" for ::1 at 2019-12-04 11:34:45 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 5484)
+
+
+Started GET "/articles/1" for ::1 at 2019-12-04 11:35:28 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 11.9ms | ActiveRecord: 1.2ms | Allocations: 18463)
+
+
+Started GET "/articles/2" for ::1 at 2019-12-04 11:35:31 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 4966)
+
+
+Started GET "/articles/1" for ::1 at 2019-12-04 11:36:16 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 4972)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:36:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4619)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:37:41 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 5639)
+
+
+Started PATCH "/articles/1" for ::1 at 2019-12-04 11:49:42 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#save as HTML
+  Parameters: {"authenticity_token"=>"GFnSIGUmy8lac/FFzT5Gb9xtCrKH9Nx0orGOJEWXCaXvAwwSu8w2Es2eKDd97jGbAXgk14kAEmZCzC3ZB/0HDw==", "article"=>{"saved_article"=>{"note"=>"note3"}}, "commit"=>"Save Article", "id"=>"1"}
+No template found for ArticlesController#save, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 1744)
+
+
+Started GET "/users/2" for ::1 at 2019-12-04 11:53:22 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3540)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.7ms | Allocations: 11549)
+
+
+Started GET "/users/2" for ::1 at 2019-12-04 11:53:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1026)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2020)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%= form_for @saved_article.user_id %>
+    
+<% end %>
+):
+1:    <h1>
+2:        <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%= form_for @saved_article.user_id %>
+10:        
+11:    <% end %>
+  
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/2" for ::1 at 2019-12-04 11:53:36 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 5738)
+
+
+Started GET "/users/2" for ::1 at 2019-12-04 11:53:37 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.1ms | Allocations: 4617)
+
+
+Started GET "/users/2" for ::1 at 2019-12-04 11:53:40 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4611)
+
+
+Started GET "/articles/1" for ::1 at 2019-12-04 11:53:40 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:13:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 760)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 9.4ms | ActiveRecord: 1.2ms | Allocations: 17658)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:53:45 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4645)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:54:03 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 5656)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:54:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1045)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2789)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Profile: <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%# <%= form_for @saved_article.user_id %>
+    
+<% end %> %>
+):
+1:    <h1>
+2:        Profile: <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%# <%= form_for @saved_article.user_id %>
+10:        
+11:    <% end %> %>
+  
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/1" for ::1 at 2019-12-04 11:54:37 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1036)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2781)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Profile: <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%= # form_for @saved_article.user_id %>
+    
+<% # end %>
+):
+1:    <h1>
+2:        Profile: <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%= # form_for @saved_article.user_id %>
+10:        
+11:    <% # end %>
+  
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/1" for ::1 at 2019-12-04 11:54:37 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1044)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 4131)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Profile: <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%= # form_for @saved_article.user_id %>
+    
+<% # end %>
+):
+1:    <h1>
+2:        Profile: <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%= # form_for @saved_article.user_id %>
+10:        
+11:    <% # end %>
+  
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/1" for ::1 at 2019-12-04 11:54:38 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1023)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2021)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Profile: <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%= # form_for @saved_article.user_id %>
+    
+<% # end %>
+):
+1:    <h1>
+2:        Profile: <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%= # form_for @saved_article.user_id %>
+10:        
+11:    <% # end %>
+  
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/1" for ::1 at 2019-12-04 11:55:25 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1023)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2021)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Profile: <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%= # form_for @saved_article.user_id %>
+    
+<% # end %>
+):
+1:    <h1>
+2:        Profile: <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%= # form_for @saved_article.user_id %>
+10:        
+11:    <% # end %>
+  
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/1" for ::1 at 2019-12-04 11:55:26 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1023)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2021)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Profile: <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%= # form_for @saved_article.user_id %>
+    
+<% # end %>
+):
+1:    <h1>
+2:        Profile: <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%= # form_for @saved_article.user_id %>
+10:        
+11:    <% # end %>
+  
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/1" for ::1 at 2019-12-04 11:55:31 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 4917)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:55:53 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1038)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2786)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>
+    Profile: <%= @user.username %>
+</h1>
+
+<h2> 
+    Welcome <%= @user.first_name %>
+</h2>
+
+<%=# form_for @saved_article.user_id %>
+    
+<%# end %>
+):
+1:    <h1>
+2:        Profile: <%= @user.username %>
+3:    </h1>
+4:    
+5:    <h2> 
+6:        Welcome <%= @user.first_name %>
+7:    </h2>
+8:    
+9:    <%=# form_for @saved_article.user_id %>
+10:        
+11:    <%# end %>
+  
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:13: unterminated string meets end of file
+app/views/users/show.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/1" for ::1 at 2019-12-04 11:56:23 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 5698)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:56:23 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4620)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 11:56:31 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 4629)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-12-04 12:53:16 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (Duration: 9.9ms | Allocations: 6114)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.6ms | Allocations: 906)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 15.3ms | Allocations: 10598)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 11999)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-12-04 12:53:18 -0800
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (Duration: 10.0ms | Allocations: 6090)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.1ms | Allocations: 762)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 14.6ms | Allocations: 10701)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 12323)
+
+
+Started GET "/rails/info/routes?path=user" for ::1 at 2019-12-04 12:53:42 -0800
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2246)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:16 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 223)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 5779)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:18 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4681)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:18 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4679)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:26 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4681)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:41 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4675)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:42 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 5746)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:44 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 4681)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:44 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 4667)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:45 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 4663)
+
+
+Started GET "/users/1" for ::1 at 2019-12-04 12:54:45 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 4673)
+
+
+Started GET "/users/" for ::1 at 2019-12-04 12:58:26 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 5937)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-12-04 12:59:56 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (Duration: 9.0ms | Allocations: 6085)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.1ms | Allocations: 690)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 13.5ms | Allocations: 10338)
+Completed 200 OK in 30ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 13402)
+
+
