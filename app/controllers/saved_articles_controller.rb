@@ -1,0 +1,6 @@
+class SavedArticlesController < ApplicationController
+    
+
+   
+end
+    
