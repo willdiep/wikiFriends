@@ -2445,3 +2445,16 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 1.0ms | Allocations: 7233)
 
 
+Started GET "/search?q=&commit=Search" for ::1 at 2019-12-03 16:12:34 -0800
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#search as JS
+  Parameters: {"q"=>"", "commit"=>"Search"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/index.html.erb within layouts/application (Duration: 58.3ms | Allocations: 8907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 167ms (Views: 132.2ms | ActiveRecord: 4.3ms | Allocations: 21636)
+
+
