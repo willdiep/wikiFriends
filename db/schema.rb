@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 2019_12_03_012059) do
 
   create_table "article_tags", force: :cascade do |t|
-    t.integer "article_id_id", null: false
-    t.integer "tag_id_id", null: false
+    t.integer "article_id", null: false
+    t.integer "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["article_id_id"], name: "index_article_tags_on_article_id_id"
-    t.index ["tag_id_id"], name: "index_article_tags_on_tag_id_id"
+    t.index ["article_id"], name: "index_article_tags_on_article_id"
+    t.index ["tag_id"], name: "index_article_tags_on_tag_id"
   end
 
   create_table "articles", force: :cascade do |t|
@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(version: 2019_12_03_012059) do
   end
 
   create_table "saved_articles", force: :cascade do |t|
-    t.integer "user_id_id", null: false
-    t.integer "article_id_id", null: false
+    t.integer "user_id", null: false
+    t.integer "article_id", null: false
     t.string "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["article_id_id"], name: "index_saved_articles_on_article_id_id"
-    t.index ["user_id_id"], name: "index_saved_articles_on_user_id_id"
+    t.index ["article_id"], name: "index_saved_articles_on_article_id"
+    t.index ["user_id"], name: "index_saved_articles_on_user_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 2019_12_03_012059) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "article_tags", "article_ids"
-  add_foreign_key "article_tags", "tag_ids"
-  add_foreign_key "saved_articles", "article_ids"
-  add_foreign_key "saved_articles", "user_ids"
+  add_foreign_key "article_tags", "articles"
+  add_foreign_key "article_tags", "tags"
+  add_foreign_key "saved_articles", "articles"
+  add_foreign_key "saved_articles", "users"
 end

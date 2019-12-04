@@ -11,7 +11,18 @@ class ArticlesController < ApplicationController
 
     def show
         @article = Article.find(params[:id])
+        @saved_article = SavedArticle.new
     end
 
+    def save
+        @saved_article = SavedArticle.new()
+    end
  
+    private
+
+    def article_params
+        params.require(:article).permit(:title, :url, :short_desc, saved_article_attribute: [:note, :article_id, :user_id])
+    end
+
+
 end
