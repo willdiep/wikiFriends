@@ -1,0 +1,27 @@
+<h1> 
+    <%= @article.title %>
+</h1>
+
+<p>
+    <%= @article.short_desc %>
+</p>
+
+<%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
+
+<iframe name="Framename" src="<%= @article.url %>" width="80%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
+</iframe>
+
+
+<%= form_for @article do |f|%>
+
+    <%= f.fields_for @saved_article do |f| %>
+
+
+    <%= f.text_area :note, placeholder: "Write your note about this article here" %>
+    
+    <% end%>
+
+
+    <%= f.submit "Save Article"%>
+
+<% end %>
