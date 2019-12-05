@@ -9567,3 +9567,296 @@ Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 439
   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "wow"], ["created_at", "2019-12-05 01:01:38.898981"], ["updated_at", "2019-12-05 01:01:38.898981"]]
   [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/rails/info/routes" for ::1 at 2019-12-05 09:31:18 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [39 times] (Duration: 15.4ms | Allocations: 5471)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 4.8ms | Allocations: 918)
+  Rendered /Users/willmacbook/.rvm/gems/ruby-2.6.4/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 27.7ms | Allocations: 10234)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 0.0ms | Allocations: 12540)
+
+
+Started GET "/" for ::1 at 2019-12-05 09:31:27 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 135.2ms | ActiveRecord: 0.0ms | Allocations: 14886)
+
+
+Started GET "/login" for ::1 at 2019-12-05 09:31:30 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 558)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 5247)
+
+
+Started POST "/sessions" for ::1 at 2019-12-05 09:31:34 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pIUugNqU3g2ei0p67BEHsHVANFK5qfavEu3KQQsQoPdWw1ks+B++xBrCt9Xk6XsdRQn1U+l3/L1KwmaKguq/8A==", "username"=>"will", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "will"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 263ms (ActiveRecord: 1.5ms | Allocations: 8273)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 09:31:34 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 312)
+  [1m[36mSavedArticle Load (0.5ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (Duration: 35.3ms | Allocations: 20230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 42.7ms | ActiveRecord: 2.7ms | Allocations: 25576)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 09:31:37 -0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2148)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 1.1ms | Allocations: 6890)
+
+
+Started GET "/rails/info/routes?path=profile" for ::1 at 2019-12-05 09:31:49 -0800
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"profile"}
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1900)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 09:34:48 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 13.1ms | Allocations: 3831)
+  Rendered users/profile.html.erb within layouts/application (Duration: 14.0ms | Allocations: 4143)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms | Allocations: 5268)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:39:36 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 1295)
+  Rendered users/profile.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1613)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3330)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:39:38 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 1120)
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1196)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 2179)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:39:42 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 1120)
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1197)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2183)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:40:16 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 1120)
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1196)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2166)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:40:29 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.3ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 5676)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 09:40:30 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 4655)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 09:41:09 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 1295)
+  Rendered users/profile.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1744)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3457)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:41:10 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 1120)
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1196)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2167)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:48:12 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 1120)
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1196)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 2187)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/profile" for ::1 at 2019-12-05 09:48:27 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 1120)
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1196)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2166)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2

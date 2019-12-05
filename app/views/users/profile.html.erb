@@ -1,2 +1,26 @@
-<h1>Profile Page</h1>
 
+<%= render 'layouts/navbar' %>
+
+
+<br />
+
+<h1>Private Profile Page</h1>
+
+<h1>
+    Username: <%= @user.username %>
+</h1>
+
+<h2> 
+    User's Name: <%= @user.first_name %> <%= @user.last_name %>
+</h2>
+
+ 
+
+<% @user.saved_articles.each do |sa| %>
+    <p>
+        <%= sa.article.title %>: <%= sa.article.short_desc %>
+        <br>
+        Note: <%= sa.note %>
+    </p>
+    
+<% end %>

@@ -45,6 +45,10 @@ class UsersController < ApplicationController
         redirect_to "/"
     end
 
+    def profile
+        @user = User.find(session[:user_id])
+    end
+    
     private
 
     def user_params
