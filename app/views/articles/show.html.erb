@@ -5,6 +5,23 @@
 <p>
     <%= @article.short_desc %>
 </p>
+<p>Tags:
+    <% @article.tags.each do |tag| %>
+    - -<%=tag.name%>- -
+    <% end %>
+</p>
+<% @article_tag.article_id = @article.id %>
+<%=form_for @article_tag do |f| %>
+    <%= f.hidden_field :article_id%> <br>
+    <%=f.collection_select :tag_id, Tag.all, :id, :name %>
+    <%=f.submit "Add Tag"%> <br>
+    <%=f.fields_for :tag do |f| %> 
+        <%=f.text_field :name %>
+        <% end %>
+    <%=f.submit "Create New Tag"%>
+        <%end%>
+
+
 
 <%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
 

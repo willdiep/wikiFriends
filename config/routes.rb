@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "welcome#home"
   # get "/", to: "welcomes#home"
-  resources :tags
   resources :articles, only: [:index, :show]
   resources :users, except: :new
 
@@ -14,5 +13,5 @@ Rails.application.routes.draw do
   get "/search", to: "articles#index"
 
   post "/saved_articles", to: "saved_articles#create"
-
+  post "/article_tags", to: "article_tags#create"
 end
