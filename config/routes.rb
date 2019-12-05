@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "/search", to: "articles#index"
 
   post "/saved_articles", to: "saved_articles#create"
+
 end
