@@ -27,9 +27,14 @@
             <%= f.submit "Save to My Articles"%>
         <% end %>   
     <% end %>
+    <br>
+    <br>
 
-<ul>
+    <h3> Comments: </h3>
 <% @article.saved_articles.each do |sa| %>
-    <li> <%="#{sa.user.username} says #{sa.note}" %> </li>
+    <div class="comment"> <%="#{sa.user.username}: #{sa.note}" %>
+    </div>
+    <br>
     <%end %>
-</ul>
+
+
