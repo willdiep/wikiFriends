@@ -15,7 +15,6 @@ class UsersController < ApplicationController
             redirect_to "/users/#{current_user.id}"
         else
         @user = User.new
-        render layout: false
         end
     end
 

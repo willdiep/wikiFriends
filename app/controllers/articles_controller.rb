@@ -10,10 +10,10 @@ class ArticlesController < ApplicationController
             end
         elsif params[:p] == ""
                 @articles = Article.all.select {|article| article.users != []}
-                @articles = @articles.sort{|article| article.users.length }
+                @articles = @articles.sort{|article| article.users.length}
         elsif params[:t] == ""
             @articles = Article.all.select {|article| article.tags != []}
-            @articles = @articles.sort{|article| article.tags.length }.reverse
+            @articles = @articles.sort{|article| article.tags.length }
         else
             @articles = Article.all.sort_by {|article| article.title}
         end
