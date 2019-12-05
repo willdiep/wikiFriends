@@ -45,7 +45,12 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        User.find(params[:id]).destroy
+
+        current_user.saved_articles.destroy_all
+        current_user.saved_articles.reload
+        # byebug
+        current_user.reload.destroy
+        
         session[:user_id] = nil
         redirect_to "/"
     end

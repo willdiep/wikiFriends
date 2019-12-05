@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   post "/article_tags", to: "article_tags#create"
 
   get "/profile", to: "users#profile"
+  delete "/profile", to: "users#delete"
 
   post "/articles/tags", to: "articles#index"
   delete "/saved_articles/:id", to: "saved_articles#destroy"
