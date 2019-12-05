@@ -15042,3 +15042,370 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 1.1ms | Allocations: 15805)
 
 
+Started GET "/profile" for ::1 at 2019-12-05 15:09:55 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:58:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  Rendered users/profile.html.erb within layouts/application (Duration: 73.1ms | Allocations: 21359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 140ms (Views: 117.9ms | ActiveRecord: 4.0ms | Allocations: 40659)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 15:09:55 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:58:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  Rendered users/profile.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 1.3ms | Allocations: 10603)
+
+
+Started DELETE "/users/1" for ::1 at 2019-12-05 15:09:58 -0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1rY3DBj5o6VGkn/le0SlqJ4CFUH8Yl9tdHhtmKoQpvIlx5JDZUTdErWCX/8K2FQK8mtznXfJYwtk8g8gi17qhA==", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `destroy'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.5ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/users_controller.rb:51:in `destroy'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE SavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/users_controller.rb:51:in `destroy'
+Completed 500 Internal Server Error in 72795ms (ActiveRecord: 1.3ms | Allocations: 106537)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `destroy'
+app/controllers/users_controller.rb:51:in `destroy'
+Started GET "/profile" for ::1 at 2019-12-05 15:11:34 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:58:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  Rendered users/profile.html.erb within layouts/application (Duration: 63.7ms | Allocations: 21431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 124ms (Views: 103.8ms | ActiveRecord: 2.8ms | Allocations: 40685)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 15:11:34 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:58:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  Rendered users/profile.html.erb within layouts/application (Duration: 24.9ms | Allocations: 4447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 1.3ms | Allocations: 10603)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 15:11:35 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:58:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:24
+  Rendered users/profile.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4483)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 1.0ms | Allocations: 10650)
+
+
+Started DELETE "/users/1" for ::1 at 2019-12-05 15:11:38 -0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F6RaOyQuZwyaidDtNtyyzqi4fdREhQTZfxoNEPfle6/k1f90WZMZu2mZ8PdHQENsxNEbCM8uOL9vkG+o1qs32Q==", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[36mSavedArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[36mSavedArticle Destroy (0.1ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[36mSavedArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[36mSavedArticle Destroy (0.1ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[36mSavedArticle Destroy (0.1ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:48:in `destroy'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `destroy'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/users_controller.rb:51:in `destroy'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:51:in `destroy'
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:51:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 31948ms (ActiveRecord: 6.1ms | Allocations: 70063)
+
+
+Started GET "/" for ::1 at 2019-12-05 15:12:10 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.8ms | Allocations: 205)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 938)
+
+
+Started GET "/login" for ::1 at 2019-12-05 15:12:13 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 1.0ms | Allocations: 560)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1244)
+
+
+Started POST "/sessions" for ::1 at 2019-12-05 15:12:17 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"NhdsVDklrC1Z6E45iOOIx2UIxVIl7hI+pn/P/qL7HZTtHZYgTN1ULfwBQ00oiosIL1GTbHYqJX92zJsnOuYbgw==", "username"=>"will", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "will"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 3108)
+
+
+Started GET "/login" for ::1 at 2019-12-05 15:12:17 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 0.5ms | Allocations: 311)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 729)
+
+
+Started DELETE "/users/1" for ::1 at 2019-12-05 15:13:48 -0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N/Zea10GBIlQosO4Aa07EaHmOtlILj1T7ofqZpK+6ODEh/skILt6PqOy46JwMcqzzY9cBcOFATX+DYjes/Cklg==", "id"=>"1"}
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms | Allocations: 408)
+
+
+Started GET "/" for ::1 at 2019-12-05 15:13:54 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.4ms | Allocations: 78)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 638)
+
+
+Started GET "/signup" for ::1 at 2019-12-05 15:13:59 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (Duration: 5.5ms | Allocations: 3348)
+  Rendered users/new.html.erb (Duration: 6.4ms | Allocations: 3658)
+Completed 200 OK in 16ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 8361)
+
+
+Started POST "/users" for ::1 at 2019-12-05 15:14:05 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"78fDbUeIEPbZQURc4C42+oiRg0m9lTpy0Gvd8ajHHF+d60LbpXIgIvSAtD8AtPnawFNMqK3G7S2wOuqAae+1WA==", "user"=>{"username"=>"will", "first_name"=>"will", "last_name"=>"will", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "will"], ["password_digest", "$2a$12$Psrkxoy0SyuNDwqu6wZpCOcDOw.s18opo/smHcmEYwj8C/XwtuwFm"], ["first_name", "will"], ["last_name", "will"], ["created_at", "2019-12-05 23:14:06.234690"], ["updated_at", "2019-12-05 23:14:06.234690"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/4
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 7.5ms | Allocations: 3473)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started GET "/signup" for ::1 at 2019-12-05 15:14:20 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (Duration: 2.9ms | Allocations: 1332)
+  Rendered users/new.html.erb (Duration: 3.2ms | Allocations: 1401)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1837)
+
+
+Started POST "/users" for ::1 at 2019-12-05 15:14:38 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"T7Rp23InAlTfFdvSQ9H92vk1USW5o8LwGqF+jlPJKHg9mOhtkN0ygPLUK7GjSzL6sfeexKnwFa968En/kuGBfw==", "user"=>{"username"=>"wd", "first_name"=>"wd", "last_name"=>"wd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "wd"], ["password_digest", "$2a$12$zxqdeVJl/I6FY9WmD4IpfOD3mKbzJc7smdHJzIYD8YN9exdUmaC5S"], ["first_name", "wd"], ["last_name", "wd"], ["created_at", "2019-12-05 23:14:39.075893"], ["updated_at", "2019-12-05 23:14:39.075893"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 6.6ms | Allocations: 3153)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started POST "/users" for ::1 at 2019-12-05 15:15:35 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"T7Rp23InAlTfFdvSQ9H92vk1USW5o8LwGqF+jlPJKHg9mOhtkN0ygPLUK7GjSzL6sfeexKnwFa968En/kuGBfw==", "user"=>{"username"=>"wd", "first_name"=>"wd", "last_name"=>"wd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "wd"], ["password_digest", "$2a$12$LEryAzMKlX5jPpPEyknuCOVqKrBh.b53YVrlEXFSYvRxy0yF55hPC"], ["first_name", "wd"], ["last_name", "wd"], ["created_at", "2019-12-05 23:15:35.861862"], ["updated_at", "2019-12-05 23:15:35.861862"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 7.2ms | Allocations: 9535)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started POST "/users" for ::1 at 2019-12-05 15:15:48 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"T7Rp23InAlTfFdvSQ9H92vk1USW5o8LwGqF+jlPJKHg9mOhtkN0ygPLUK7GjSzL6sfeexKnwFa968En/kuGBfw==", "user"=>{"username"=>"wd", "first_name"=>"wd", "last_name"=>"wd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "wd"], ["password_digest", "$2a$12$sNkH9ENNQt5YjrbFOd3aoelp5DbTr69uEm5eyst1a5glp2W6mra6e"], ["first_name", "wd"], ["last_name", "wd"], ["created_at", "2019-12-05 23:15:48.727555"], ["updated_at", "2019-12-05 23:15:48.727555"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 250ms (ActiveRecord: 7.0ms | Allocations: 10718)
+
+
+Started GET "/users/7" for ::1 at 2019-12-05 15:15:48 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.7ms | Allocations: 9300)
+
+
+Started GET "/" for ::1 at 2019-12-05 15:15:53 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 78)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 637)
+
+
+Started GET "/" for ::1 at 2019-12-05 15:15:53 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 71)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 469)
+
+
