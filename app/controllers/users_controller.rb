@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
     def new
         @user = User.new
+        render layout: false
     end
 
     def create
@@ -23,6 +24,8 @@ class UsersController < ApplicationController
             flash[:errors] = @user.errors.full_messages
             redirect_to 'new'
         end
+        render layout: false
+
     end
 
     def edit

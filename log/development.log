@@ -10315,3 +10315,2051 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 1.2ms | Allocations: 8616)
 
 
+Started GET "/" for ::1 at 2019-12-05 10:20:24 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms | Allocations: 5329)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:20:26 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 5298)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:20:26 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 5280)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:20:27 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 5296)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 10:20:31 -0800
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `sort_by'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.9ms | Allocations: 9629)
+
+
+Started GET "/users" for ::1 at 2019-12-05 10:20:35 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 749)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.4ms | Allocations: 5997)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:20:42 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.4ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.5ms | Allocations: 8666)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-12-05 10:20:46 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 1366)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 7186)
+
+
+Started GET "/users" for ::1 at 2019-12-05 10:20:49 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 730)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms | Allocations: 5972)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 10:20:51 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 1121)
+  Rendered users/profile.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1197)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2177)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    20:         </a>
+    21:         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    22:           <a class="dropdown-item" href="#">View Private Profile</a>
+    23:           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
+    24:           <a class="dropdown-item" href="#">View Public Profile</a>
+    25:   
+    26:           <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item hover" %>
+  
+app/views/layouts/_navbar.html.erb:23
+app/views/users/profile.html.erb:2
+Started GET "/users/1" for ::1 at 2019-12-05 10:23:03 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3054)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.8ms | Allocations: 9911)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 10:23:11 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:19
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  Rendered users/profile.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3058)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.7ms | Allocations: 8901)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 10:23:12 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:19
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  Rendered users/profile.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2843)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.9ms | Allocations: 8551)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 10:23:13 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:19
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  Rendered users/profile.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms | Allocations: 8546)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 10:23:16 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:19
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  Rendered users/profile.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.6ms | Allocations: 8533)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:23:21 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.1ms | Allocations: 8614)
+
+
+Started GET "/users/2" for ::1 at 2019-12-05 10:23:22 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.8ms | Allocations: 7881)
+
+
+Started GET "/users/3" for ::1 at 2019-12-05 10:23:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 13.0ms | Allocations: 5717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 1.7ms | Allocations: 11485)
+
+
+Started GET "/users/2" for ::1 at 2019-12-05 10:23:26 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 7903)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 10:23:30 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:49:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:19
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  Rendered users/profile.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.7ms | Allocations: 8557)
+
+
+Started DELETE "/sessions" for ::1 at 2019-12-05 10:23:47 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sztCHwY82GQYx9ckwOGgGdDZOPNjCvpsyAjUBO3XXbRWGqCBnPkNAdkZMJAf7RpbVyhbSX56gX7iyKoImkth1A=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:23:47 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 545)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 6024)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:24:31 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 5665)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:24:34 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4965)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:24:38 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4964)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:25:10 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/willmacbook/Desktop/wikiMEdia/app/controllers/application_controller.rb:5: syntax error, unexpected '=', expecting end
+... User.find(session[:user_id]) =|| []
+...                              ^):
+  
+app/controllers/application_controller.rb:5: syntax error, unexpected '=', expecting end
+app/controllers/application_controller.rb:5: syntax error, unexpected '=', expecting end
+app/controllers/application_controller.rb:5: syntax error, unexpected '=', expecting end
+app/controllers/welcome_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2019-12-05 10:26:52 -0800
+Started GET "/" for ::1 at 2019-12-05 10:26:53 -0800
+Started GET "/" for ::1 at 2019-12-05 10:28:37 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 422)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.3ms | Allocations: 14968)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:28:39 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 75)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5034)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:29:16 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms | Allocations: 7444)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:29:18 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4974)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:29:46 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 6155)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:31:36 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 6001)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:31:44 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5710)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:32:18 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.8ms | Allocations: 7619)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:32:19 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 312)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5214)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:32:35 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 78)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 655)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:32:56 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 78)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 638)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:32:57 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms | Allocations: 7609)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/signup" for ::1 at 2019-12-05 10:33:01 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (Duration: 7.9ms | Allocations: 3363)
+  Rendered users/new.html.erb (Duration: 8.9ms | Allocations: 3663)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 8485)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:33:04 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5212)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:33:05 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5200)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:33:12 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 77)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 482)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:33:14 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5190)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:33:35 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms | Allocations: 7596)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:33:36 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5190)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:33:37 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 78)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 632)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:33:39 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5196)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/login" for ::1 at 2019-12-05 10:33:53 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 5198)
+
+
+  
+ActionView::Template::Error (Couldn't find User without an ID):
+    39:           </a>
+    40:           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    41:             <a class="dropdown-item" href=<%="/profile"%>>View Profile</a>
+    42:             <a class="dropdown-item" href=<%="/users/#{current_user.id}/edit"%>>Edit Profile</a>
+    43:             <a class="dropdown-item" href=<%="/users/#{current_user.id}"%>>View My Articles</a>
+    44:     
+    45:             <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/layouts/application.html.erb:42
+Started GET "/" for ::1 at 2019-12-05 10:34:21 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 78)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 641)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:34:22 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 0.6ms | Allocations: 319)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 874)
+
+
+Started GET "/signup" for ::1 at 2019-12-05 10:34:27 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (Duration: 2.3ms | Allocations: 1379)
+  Rendered users/new.html.erb (Duration: 2.5ms | Allocations: 1448)
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 8084)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:34:29 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 0.5ms | Allocations: 311)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started GET "/signup" for ::1 at 2019-12-05 10:34:31 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (Duration: 1.8ms | Allocations: 1312)
+  Rendered users/new.html.erb (Duration: 2.0ms | Allocations: 1381)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 1814)
+
+
+Started GET "/signup" for ::1 at 2019-12-05 10:34:36 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (Duration: 2.5ms | Allocations: 1312)
+  Rendered users/new.html.erb (Duration: 2.8ms | Allocations: 1381)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1790)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:34:44 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 0.5ms | Allocations: 311)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 699)
+
+
+Started POST "/sessions" for ::1 at 2019-12-05 10:34:48 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XZrAttwe6mBBl+iA6YWrv2EWfdyzEhu2JROb/MiGTVSv3Lca/pWKqcXeFS/hfdcSUV+83ePMEaR9PDc3QXxSUw==", "username"=>"will", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "will"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 230ms (ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started POST "/sessions" for ::1 at 2019-12-05 10:34:49 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XZrAttwe6mBBl+iA6YWrv2EWfdyzEhu2JROb/MiGTVSv3Lca/pWKqcXeFS/hfdcSUV+83ePMEaR9PDc3QXxSUw==", "username"=>"will", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "will"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 226ms (ActiveRecord: 0.1ms | Allocations: 956)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:34:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 33.5ms | Allocations: 19001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 1.9ms | Allocations: 25245)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 10:34:52 -0800
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `sort_by'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.9ms | Allocations: 10568)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:34:53 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 77)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 462)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:34:53 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.1ms | Allocations: 71)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 471)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:35:03 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 1.2ms | Allocations: 318)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/sessions" for ::1 at 2019-12-05 10:35:07 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZJWPR73SpraXKiHkSUwZDzA6n4xJs+ohcq+ectCD3t+W0/jrn1nGfxNj3EtBtGWiAHNejRlt4DMqgDK5WXnB2A==", "username"=>"will", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "will"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 238ms (ActiveRecord: 1.0ms | Allocations: 946)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:35:07 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.6ms | Allocations: 8623)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:35:33 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.2ms | Allocations: 71)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 469)
+
+
+Started GET "/" for ::1 at 2019-12-05 10:35:33 -0800
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb
+  Rendered welcome/home.html.erb (Duration: 0.3ms | Allocations: 71)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 469)
+
+
+Started GET "/login" for ::1 at 2019-12-05 10:35:40 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 0.4ms | Allocations: 311)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 707)
+
+
+Started POST "/sessions" for ::1 at 2019-12-05 10:35:45 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"VXIGPOEOLUZmIVvFSV6LR1tG6f3WkcHfbQxQDUE5bdenNHGQw4VNj+JopmpBpvfqaw8o/IZPy801I/zGyMNy0A==", "username"=>"will", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "will"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 237ms (ActiveRecord: 0.1ms | Allocations: 958)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:35:45 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.6ms | Allocations: 8618)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:36:06 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 1.1ms | Allocations: 8622)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:36:09 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 1.0ms | Allocations: 8618)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 10:36:20 -0800
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `sort_by'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2681)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.6ms | Allocations: 9602)
+
+
+Started GET "/users" for ::1 at 2019-12-05 10:36:21 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 902)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 6283)
+
+
+Started GET "/profile" for ::1 at 2019-12-05 10:36:25 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:52:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.3ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:19
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:21
+  Rendered users/profile.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 1.1ms | Allocations: 8915)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-12-05 10:36:27 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.1ms | Allocations: 1394)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1554)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.3ms | Allocations: 7458)
+
+
+Started PATCH "/users/1" for ::1 at 2019-12-05 10:36:31 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"0Q2SsJISmzb/0SbL6oDGa517LmQ+KJGEmP6y9RMEr8nu3LGCMxLFt4sL/X+H1N+D1v/eTDyQd6q4fzoggeSvMA==", "user"=>{"username"=>"will", "first_name"=>"will", "last_name"=>"will", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:37:in `update'
+  [1m[36mUser Update (6.1ms)[0m  [1m[33mUPDATE "users" SET "last_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_name", "will"], ["updated_at", "2019-12-05 18:36:31.319300"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `update'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:37:in `update'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 13ms (ActiveRecord: 7.0ms | Allocations: 3600)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:36:31 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.7ms | Allocations: 8626)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 10:36:37 -0800
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `sort_by'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.6ms | Allocations: 9606)
+
+
+Started GET "/search?q=strawberry&commit=Search" for ::1 at 2019-12-05 10:36:53 -0800
+Processing by ArticlesController#index as HTML
+  Parameters: {"q"=>"strawberry", "commit"=>"Search"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry"], ["created_at", "2019-12-05 18:36:54.068272"], ["updated_at", "2019-12-05 18:36:54.068272"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Fields Forever"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Fields Forever"], ["created_at", "2019-12-05 18:36:54.079267"], ["updated_at", "2019-12-05 18:36:54.079267"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Shortcake"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Shortcake"], ["created_at", "2019-12-05 18:36:54.083733"], ["updated_at", "2019-12-05 18:36:54.083733"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Alarm Clock"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Alarm Clock"], ["created_at", "2019-12-05 18:36:54.087755"], ["updated_at", "2019-12-05 18:36:54.087755"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Panic!"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Panic!"], ["created_at", "2019-12-05 18:36:54.091876"], ["updated_at", "2019-12-05 18:36:54.091876"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Hill House"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Hill House"], ["created_at", "2019-12-05 18:36:54.096955"], ["updated_at", "2019-12-05 18:36:54.096955"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry poison-dart frog"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry poison-dart frog"], ["created_at", "2019-12-05 18:36:54.101912"], ["updated_at", "2019-12-05 18:36:54.101912"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Marshmallow"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Marshmallow"], ["created_at", "2019-12-05 18:36:54.106805"], ["updated_at", "2019-12-05 18:36:54.106805"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Switchblade"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Switchblade"], ["created_at", "2019-12-05 18:36:54.111971"], ["updated_at", "2019-12-05 18:36:54.111971"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Strawberry Letter 23"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Strawberry Letter 23"], ["created_at", "2019-12-05 18:36:54.116369"], ["updated_at", "2019-12-05 18:36:54.116369"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry"], ["short_desc", "The garden strawberry (or simply strawberry; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries, which are cultivated worldwide for their fruit."], ["updated_at", "2019-12-05 18:36:54.129551"], ["id", 81]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Fields_Forever"], ["short_desc", "\"Strawberry Fields Forever\" is a song by the English rock band the Beatles, written by John Lennon and credited to Lennon–McCartney."], ["updated_at", "2019-12-05 18:36:54.133256"], ["id", 82]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Shortcake"], ["short_desc", "Strawberry Shortcake is a cartoon character originally used in greeting cards, but who was later expanded to include dolls, posters, and other products."], ["updated_at", "2019-12-05 18:36:54.137420"], ["id", 83]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Alarm_Clock"], ["short_desc", "Strawberry Alarm Clock is a psychedelic rock band formed in 1967 in Los Angeles best known for their 1967 hit single \"Incense and Peppermints\"."], ["updated_at", "2019-12-05 18:36:54.141966"], ["id", 84]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Panic!"], ["short_desc", "Strawberry Panic! (ストロベリー・パニック!, Sutoroberī Panikku!) is a series of Japanese illustrated short stories written by Sakurako Kimino, which focus on a group of teenage girls attending three affiliated all-girl schools on Astraea Hill."], ["updated_at", "2019-12-05 18:36:54.145474"], ["id", 85]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Hill_House"], ["short_desc", "Strawberry Hill House—often called simply Strawberry Hill—is the Gothic Revival villa that was built in Twickenham, London by Horace Walpole (1717–1797) from 1749 onward."], ["updated_at", "2019-12-05 18:36:54.148688"], ["id", 86]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_poison-dart_frog"], ["short_desc", "The strawberry poison frog or strawberry poison-dart frog (Oophaga pumilio, formerly Dendrobates pumilio) is a species of small poison dart frog found in Central America."], ["updated_at", "2019-12-05 18:36:54.152054"], ["id", 87]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Marshmallow"], ["short_desc", "Strawberry Marshmallow (Japanese: 苺ましまろ, Hepburn: Ichigo Mashimaro) is a Japanese manga series by Barasui about the adventures of four elementary school girls and their older sister-figure."], ["updated_at", "2019-12-05 18:36:54.155360"], ["id", 88]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Switchblade"], ["short_desc", "Strawberry Switchblade were a Scottish new wave/pop duo formed in Glasgow in 1981 by Jill Bryson and Rose McDowall, best known for their song \"Since Yesterday\" from 1985, and their flamboyant clothing with bows and polka-dots."], ["updated_at", "2019-12-05 18:36:54.158431"], ["id", 89]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Strawberry_Letter_23"], ["short_desc", "\"Strawberry Letter 23\" is a 1971 song written and composed by Shuggie Otis from his 1971 album Freedom Flight."], ["updated_at", "2019-12-05 18:36:54.162572"], ["id", 90]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 581)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 434ms (Views: 9.6ms | ActiveRecord: 31.1ms | Allocations: 65068)
+
+
+Started GET "/articles/83" for ::1 at 2019-12-05 10:36:56 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 17.4ms | Allocations: 9209)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 83], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/show.html.erb:32
+  Rendered articles/show.html.erb within layouts/application (Duration: 24.9ms | Allocations: 13693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 61ms (Views: 29.8ms | ActiveRecord: 2.8ms | Allocations: 23476)
+
+
+Started POST "/article_tags" for ::1 at 2019-12-05 10:37:01 -0800
+Processing by ArticleTagsController#create as HTML
+  Parameters: {"authenticity_token"=>"K0qHoIZ46bbNRsqcS2ZzBOQoiprQ9IxY270vkZQ4h8tO8j7NvgiSe/5OM4J6YvSN143a4DwtsA0BC3bYh3QjKg==", "article_tag"=>{"article_id"=>"83", "tag_id"=>"5", "tag"=>{"name"=>""}}, "commit"=>"Add Tag"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mArticleTag Create (0.5ms)[0m  [1m[32mINSERT INTO "article_tags" ("article_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 83], ["tag_id", 5], ["created_at", "2019-12-05 18:37:01.170892"], ["updated_at", "2019-12-05 18:37:01.170892"]]
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:21:in `create'
+Redirected to http://localhost:3000/articles/83
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms | Allocations: 6098)
+
+
+Started GET "/articles/83" for ::1 at 2019-12-05 10:37:01 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 3.2ms | Allocations: 2790)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 83], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/show.html.erb:32
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 5328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.7ms | Allocations: 10968)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-05 10:37:19 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"FrJBOd1Jku8r4hE75ZiaekU83cdywSL7Y9jANAU8PMXzk6OnR4xHiuo89o86lCA4ws2+fW+xWelJGL44cqAApQ==", "saved_article"=>{"note"=>"delicious", "article_id"=>"83"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:6:in `create'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:6:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[36mSavedArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "saved_articles" ("user_id", "article_id", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 83], ["note", "delicious"], ["created_at", "2019-12-05 18:37:19.555337"], ["updated_at", "2019-12-05 18:37:19.555337"]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+Redirected to http://localhost:3000/articles/83
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms | Allocations: 4434)
+
+
+Started GET "/articles/83" for ::1 at 2019-12-05 10:37:19 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 3.3ms | Allocations: 2790)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 83], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/show.html.erb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:33
+  Rendered articles/show.html.erb within layouts/application (Duration: 13.9ms | Allocations: 10154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 1.3ms | Allocations: 15772)
+
+
+Started PATCH "/saved_articles/18" for ::1 at 2019-12-05 10:37:29 -0800
+Processing by SavedArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"K9gDHK/qbir6YUb4ANu2wUHcfbEosSgsUHyOMb/kXpjO+eGCNS+7Tzu/oUzf1wyDxi0eCzXBUz56vPA9yHhi+A==", "saved_article"=>{"note"=>"Very delicious", "id"=>"18", "article_id"=>"83"}, "commit"=>"Update Article Note", "id"=>"18"}
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:15:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:16:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:16:in `update'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:16:in `update'
+  [1m[36mSavedArticle Update (0.3ms)[0m  [1m[33mUPDATE "saved_articles" SET "note" = ?, "updated_at" = ? WHERE "saved_articles"."id" = ?[0m  [["note", "Very delicious"], ["updated_at", "2019-12-05 18:37:29.523620"], ["id", 18]]
+  ↳ app/controllers/saved_articles_controller.rb:16:in `update'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:16:in `update'
+Redirected to http://localhost:3000/articles/83
+Completed 302 Found in 16ms (ActiveRecord: 7.2ms | Allocations: 5576)
+
+
+Started GET "/articles/83" for ::1 at 2019-12-05 10:37:29 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 4.8ms | Allocations: 2790)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 83], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 83]]
+  ↳ app/views/articles/show.html.erb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:33
+  Rendered articles/show.html.erb within layouts/application (Duration: 17.1ms | Allocations: 10148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 1.7ms | Allocations: 15785)
+
+
+Started DELETE "/saved_articles/18" for ::1 at 2019-12-05 10:37:34 -0800
+Processing by SavedArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XcHf13I6YsNCEuOrw7tAa8oT//NBB3fK/3KqFltnv5O44D1J6P+3poPMBB8ct/opTeKcSVx3DNjVstQaLPuD8w==", "id"=>"18"}
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:25:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:26:in `destroy'
+  [1m[36mSavedArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "saved_articles" WHERE "saved_articles"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/saved_articles_controller.rb:26:in `destroy'
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:26:in `destroy'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms | Allocations: 2586)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 10:37:34 -0800
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `sort_by'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2982)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.6ms | Allocations: 10038)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:37:38 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 1.0ms | Allocations: 8635)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 10:37:41 -0800
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `sort_by'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2981)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.7ms | Allocations: 10041)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:38:42 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 1.0ms | Allocations: 8612)
+
+
+Started GET "/articles" for ::1 at 2019-12-05 10:38:43 -0800
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `sort_by'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2981)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.8ms | Allocations: 10035)
+
+
+Started GET "/search?q=pear&commit=Search" for ::1 at 2019-12-05 10:38:48 -0800
+Processing by ArticlesController#index as HTML
+  Parameters: {"q"=>"pear", "commit"=>"Search"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearson correlation coefficient"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearson correlation coefficient"], ["created_at", "2019-12-05 18:38:48.617127"], ["updated_at", "2019-12-05 18:38:48.617127"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearl Jam"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearl Jam"], ["created_at", "2019-12-05 18:38:48.627843"], ["updated_at", "2019-12-05 18:38:48.627843"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearl"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearl"], ["created_at", "2019-12-05 18:38:48.632916"], ["updated_at", "2019-12-05 18:38:48.632916"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearl S. Buck"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearl S. Buck"], ["created_at", "2019-12-05 18:38:48.638342"], ["updated_at", "2019-12-05 18:38:48.638342"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearl Harbor (film)"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearl Harbor (film)"], ["created_at", "2019-12-05 18:38:48.645022"], ["updated_at", "2019-12-05 18:38:48.645022"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearl Harbor advance-knowledge conspiracy theory"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearl Harbor advance-knowledge conspiracy theory"], ["created_at", "2019-12-05 18:38:48.649733"], ["updated_at", "2019-12-05 18:38:48.649733"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearl River Delta"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearl River Delta"], ["created_at", "2019-12-05 18:38:48.654421"], ["updated_at", "2019-12-05 18:38:48.654421"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearls Before Swine (comics)"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearls Before Swine (comics)"], ["created_at", "2019-12-05 18:38:48.658732"], ["updated_at", "2019-12-05 18:38:48.658732"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearland, Texas"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearland, Texas"], ["created_at", "2019-12-05 18:38:48.663914"], ["updated_at", "2019-12-05 18:38:48.663914"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Pearson (TV series)"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pearson (TV series)"], ["created_at", "2019-12-05 18:38:48.668988"], ["updated_at", "2019-12-05 18:38:48.668988"]]
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:12:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"], ["short_desc", "In statistics, the Pearson correlation coefficient (PCC, pronounced ), also referred to as Pearson's r, the Pearson product-moment correlation coefficient (PPMCC) or the bivariate correlation, is a measure of the linear correlation between two variables X and Y."], ["updated_at", "2019-12-05 18:38:48.672789"], ["id", 91]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearl_Jam"], ["short_desc", "Pearl Jam is an American rock band formed in 1990 in Seattle, Washington. The band's current lineup comprises founding members Eddie Vedder (lead vocals, guitar), Mike McCready (lead guitar), Stone Gossard (rhythm guitar) and Jeff Ament (bass) as well as drummer Matt Cameron, who joined in 1998. Keyboardist Boom Gaspar has also been a session/touring member with the band since 2002. Drummers Jack Irons, Dave Krusen, Matt Chamberlain and Dave Abbruzzese are former members of the band."], ["updated_at", "2019-12-05 18:38:48.676729"], ["id", 92]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearl"], ["short_desc", "A pearl is a hard, glistening object produced within the soft tissue (specifically the mantle) of a living shelled mollusk or another animal, such as a conulariid."], ["updated_at", "2019-12-05 18:38:48.680213"], ["id", 93]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearl_S._Buck"], ["short_desc", "Pearl Sydenstricker Buck (June 26, 1892 – March 6, 1973; also known by her Chinese name Sai Zhenzhu; Chinese: 赛珍珠) was an American writer and novelist."], ["updated_at", "2019-12-05 18:38:48.683623"], ["id", 94]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearl_Harbor_(film)"], ["short_desc", "Pearl Harbor is a 2001 American epic romantic war drama film directed by Michael Bay, produced by Bay and Jerry Bruckheimer and written by Randall Wallace."], ["updated_at", "2019-12-05 18:38:48.687316"], ["id", 95]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearl_Harbor_advance-knowledge_conspiracy_theory"], ["short_desc", "The Pearl Harbor advance-knowledge conspiracy theory is the argument that U.S. Government officials had advance knowledge of Japan's December 7, 1941, attack on Pearl Harbor."], ["updated_at", "2019-12-05 18:38:48.690504"], ["id", 96]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearl_River_Delta"], ["short_desc", "The Pearl River Delta Metropolitan Region (PRD, Chinese: 珠江三角洲城市圈; pinyin: Zhūjiāng Sānjiǎozhōu Chéngshìquān) is the low-lying area surrounding the Pearl River estuary, where the Pearl River flows into the South China Sea."], ["updated_at", "2019-12-05 18:38:48.694266"], ["id", 97]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearls_Before_Swine_(comics)"], ["short_desc", "Pearls Before Swine (also known as Pearls) is an American comic strip written and illustrated by Stephan Pastis."], ["updated_at", "2019-12-05 18:38:48.697349"], ["id", 98]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.3ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearland,_Texas"], ["short_desc", "Pearland ( PAIR-land) is a city in the U.S. state of Texas, within the Houston–The Woodlands–Sugar Land metropolitan area."], ["updated_at", "2019-12-05 18:38:48.700769"], ["id", 99]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "url" = ?, "short_desc" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["url", "https://en.wikipedia.org/wiki/Pearson_(TV_series)"], ["short_desc", "Pearson is an American political drama television series created by Aaron Korsh and Daniel Arkin that premiered on USA Network."], ["updated_at", "2019-12-05 18:38:48.704261"], ["id", 100]]
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:16:in `block in search'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 351ms (Views: 8.2ms | ActiveRecord: 30.9ms | Allocations: 61852)
+
+
+Started GET "/articles/95" for ::1 at 2019-12-05 10:38:52 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 5.0ms | Allocations: 2780)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 95], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/show.html.erb:32
+  Rendered articles/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 5316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.9ms | Allocations: 10932)
+
+
+Started POST "/article_tags" for ::1 at 2019-12-05 10:39:03 -0800
+Processing by ArticleTagsController#create as HTML
+  Parameters: {"authenticity_token"=>"BOFjDeacLvKd+P86+t5yPTB6dShkkWmUPVqTTdk8u9NhWdpg3uxVP67wBiTL2vW0A98lUohIVcHn7MoEynAfMg==", "article_tag"=>{"article_id"=>"95", "tag_id"=>"3", "tag"=>{"name"=>"sad"}}, "commit"=>"Create New Tag"}
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "sad"], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:6:in `create'
+  [1m[36mCACHE Tag Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "sad"], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:7:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:7:in `create'
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sad"], ["created_at", "2019-12-05 18:39:03.070917"], ["updated_at", "2019-12-05 18:39:03.070917"]]
+  ↳ app/controllers/article_tags_controller.rb:7:in `create'
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:7:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:9:in `create'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:9:in `create'
+  [1m[36mArticleTag Create (0.5ms)[0m  [1m[32mINSERT INTO "article_tags" ("article_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 95], ["tag_id", 7], ["created_at", "2019-12-05 18:39:03.083900"], ["updated_at", "2019-12-05 18:39:03.083900"]]
+  ↳ app/controllers/article_tags_controller.rb:9:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:9:in `create'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:10:in `create'
+Redirected to http://localhost:3000/articles/95
+Completed 302 Found in 21ms (ActiveRecord: 9.2ms | Allocations: 7860)
+
+
+Started GET "/articles/95" for ::1 at 2019-12-05 10:39:03 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 4.0ms | Allocations: 2824)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 95], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/show.html.erb:32
+  Rendered articles/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 5360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.7ms | Allocations: 10977)
+
+
+Started POST "/article_tags" for ::1 at 2019-12-05 10:39:05 -0800
+Processing by ArticleTagsController#create as HTML
+  Parameters: {"authenticity_token"=>"5ZHWkV/rywxOJ2AgltOI75MTwuZ4Ry6YYhTE5nJg7p0AsDQPxS4eaY/5h5RJ3zKtFOKhXGU3VYpI1LrqBfzS/Q==", "article_tag"=>{"article_id"=>"95", "tag_id"=>"1", "tag"=>{"name"=>""}}, "commit"=>"Add Tag"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mArticleTag Create (0.3ms)[0m  [1m[32mINSERT INTO "article_tags" ("article_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 95], ["tag_id", 1], ["created_at", "2019-12-05 18:39:05.758291"], ["updated_at", "2019-12-05 18:39:05.758291"]]
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/article_tags_controller.rb:20:in `create'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/article_tags_controller.rb:21:in `create'
+Redirected to http://localhost:3000/articles/95
+Completed 302 Found in 14ms (ActiveRecord: 6.9ms | Allocations: 6228)
+
+
+Started GET "/articles/95" for ::1 at 2019-12-05 10:39:05 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 2.7ms | Allocations: 2837)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 95], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/show.html.erb:32
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 5373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 10984)
+
+
+Started POST "/saved_articles" for ::1 at 2019-12-05 10:39:10 -0800
+Processing by SavedArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"O6N0mB1ePNTMj2LESumYwwkE3A7RQruAmwyzzkTuwtTegpYGh5vpsQ1RhXCV5SKBjvW/tMwywJKxzM3CM3L+tA==", "saved_article"=>{"note"=>"note", "article_id"=>"95"}, "commit"=>"Save to My Articles"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:6:in `create'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/saved_articles_controller.rb:6:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[36mSavedArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "saved_articles" ("user_id", "article_id", "note", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 95], ["note", "note"], ["created_at", "2019-12-05 18:39:10.948872"], ["updated_at", "2019-12-05 18:39:10.948872"]]
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/saved_articles_controller.rb:7:in `create'
+Redirected to http://localhost:3000/articles/95
+Completed 302 Found in 12ms (ActiveRecord: 6.8ms | Allocations: 4206)
+
+
+Started GET "/articles/95" for ::1 at 2019-12-05 10:39:10 -0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "article_tags" ON "tags"."id" = "article_tags"."tag_id" WHERE "article_tags"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/_tags.html.erb:2
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/articles/_tags.html.erb:15
+  Rendered articles/_tags.html.erb (Duration: 3.0ms | Allocations: 2837)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "saved_articles" ON "users"."id" = "saved_articles"."user_id" WHERE "saved_articles"."article_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["article_id", 95], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:14
+  [1m[36mSavedArticle Load (0.1ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."article_id" = ?[0m  [["article_id", 95]]
+  ↳ app/views/articles/show.html.erb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:33
+  Rendered articles/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 10194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 1.1ms | Allocations: 15819)
+
+
+Started GET "/users/1" for ::1 at 2019-12-05 10:39:13 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mSavedArticle Load (0.2ms)[0m  [1m[34mSELECT "saved_articles".* FROM "saved_articles" WHERE "saved_articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3559)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.8ms | Allocations: 9327)
+
+
