@@ -22,9 +22,11 @@
           <a class="dropdown-item" href="#">View Profile</a>
           <a class="dropdown-item" href="<%= edit_user_path%>">Edit Profile</a>
           <a class="dropdown-item" href="#">View My Articles</a>
-          <a class="dropdown-item" href="#">Log Off</a>
+  
+          <%= link_to "Log Out", "/sessions", method: :delete, class: "dropdown-item" %>
+
         </div>
-      </li>
+      </%=>
     </ul>
   </div>
 </nav>
@@ -38,15 +40,16 @@
 </h1>
 
 <h2> 
-    Welcome <%= @user.first_name %> <%= @user.last_name %>
+    User's Name: <%= @user.first_name %> <%= @user.last_name %>
 </h2>
 
  
 
-<%=
-form_for @saved_article.user
-%>
+<% @user.saved_articles.each do |sa| %>
+    <p>
+        <%= sa.article.title %>: <%= sa.article.short_desc %>
+        <br>
+        Note: <%= sa.note %>
+    </p>
     
-<%
-# end %
->
+<% end %>

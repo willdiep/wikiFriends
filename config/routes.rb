@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"
   post "/sessions", to: "sessions#create"
+  get "/sessions", to: "sessions#destroy"
   delete "/sessions", to: "sessions#destroy"
   get "/search", to: "articles#index"
 
