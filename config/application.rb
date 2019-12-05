@@ -2,7 +2,8 @@ require_relative 'boot'
 
 require 'rails/all'
 
-config.assets.paths << Rails.root.join("lib", "images")
+config.assets.paths << Rails.root.join("app", "assets", "images")
+
 
 
 # Require the gems listed in Gemfile, including any gems
