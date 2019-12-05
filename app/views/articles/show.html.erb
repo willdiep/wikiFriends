@@ -1,47 +1,33 @@
-<h1> 
-    <%= @article.title %>
-</h1>
+<h1>  <%= @article.title %> </h1>
 
-<p>
-    <%= @article.short_desc %>
-</p>
-<p>Tags:
-    <% @article.tags.each do |tag| %>
-    - -<%=tag.name%>- -
-    <% end %>
-</p>
-<% @article_tag.article_id = @article.id %>
-<% if flash[:error] %>
-       <p>ERROR: <% flash[:error].each do |error| %> 
-         <%= error %>
-         <% end %>
-        </p>
-<% end %>
-<%=form_for @article_tag do |f| %>
-    <%= f.hidden_field :article_id%> <br>
-    <%=f.collection_select :tag_id, Tag.all, :id, :name %>
-    <%=f.submit "Add Tag"%> <br>
-    <%=f.fields_for :tag do |f| %> 
-        <%=f.text_field :name %>
-        <% end %>
-    <%=f.submit "Create New Tag"%>
-        <%end%>
-
-
+<p>  <%= @article.short_desc %> </p>
 
 <%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
 
+<%= render 'tags' %>
+
 <iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
 </iframe>
-<% if !@article.users.include?(current_user) %>
-    <% @saved_article.article_id = @article.id %>
-    <%= form_for @saved_article do |f| %>
-        <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
-        <%= f.hidden_field :article_id%> <br>
 
-        <%= f.submit "Save to My Articles"%>
+<% if @article.users.include?(current_user) %>
+    <h4> Edit Your Note: </h4>
+    <% @saved_article = current_user.saved_articles.find{ |sa| sa.article == @article} %>
+    <%= form_for @saved_article do |f| %>
+        <%= f.text_area :note%> <br>    
+        <%= f.hidden_field :id%> 
+        <%= f.hidden_field :article_id%> 
+        <%= f.submit "Update Article Note"%>
+    <% end %>  
+    <%= link_to "Unsave Article", @saved_article, method: :delete, data: { confirm: "Unsave this article and delete your note?" } %>
+<% else %>
+        <% @saved_article.article_id = @article.id %>
+        <%= form_for @saved_article do |f| %>
+            <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
+            <%= f.hidden_field :article_id%> <br>
+            <%= f.submit "Save to My Articles"%>
+        <% end %>   
     <% end %>
-<% end %>
+
 <ul>
 <% @article.saved_articles.each do |sa| %>
     <li> <%="#{sa.user.username} says #{sa.note}" %> </li>

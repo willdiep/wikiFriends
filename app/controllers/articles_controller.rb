@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
                 article.tags.include?(Tag.find_by(name: params[:f]))
             end
         else
-            @articles = Article.all
+            @articles = Article.all.sort_by {|article| article.title}
         end
     end
 

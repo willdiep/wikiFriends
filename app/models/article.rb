@@ -6,8 +6,6 @@ class Article < ApplicationRecord
 
     accepts_nested_attributes_for :saved_articles
 
-
-
     def self.search(search)
         response = RestClient.get("https://en.wikipedia.org/w/api.php?action=opensearch&search=#{search}&limit=10&format=json")
         results_hash = JSON.parse(response)
