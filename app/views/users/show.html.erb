@@ -16,8 +16,14 @@
 <% @user.saved_articles.each do |sa| %>
     <p>
         <%= sa.article.title %>: <%= sa.article.short_desc %>
-        <br>
+    </p>
+
+    <p>
         Note: <%= sa.note %>
     </p>
-    
+
+<%= link_to "Visit #{sa.article.title} On Wikipedia", sa.article.url %>
+
+    <br />
+    <br />
 <% end %>

@@ -2,7 +2,7 @@ require_relative 'boot'
 
 require 'rails/all'
 
-config.assets.paths << Rails.root.join("app", "assets", "images")
+
 
 
 
