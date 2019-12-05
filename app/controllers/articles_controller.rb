@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
     def show
         @article = Article.find(params[:id])
         @saved_article = SavedArticle.new
+        @article_tag = ArticleTag.new
     end
 
     def save
