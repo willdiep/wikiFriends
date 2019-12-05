@@ -1,8 +1,14 @@
+
 <%= form_with(url: "/search", method: "get", local: true) do %>
-    <%= label_tag(:q, "Search Articles:") %>
+    <%= label_tag(:q, "Search Articles by Title:") %>
     <%= text_field_tag(:q) %>
     <%= submit_tag("Search") %>
-  <% end %>
+<% end %>
+<%= form_with(url: "/search", method: "get", local: true) do %>
+  <%= label_tag(:f, "Search Articles by Tag:") %>
+  <%= text_field_tag(:f) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
   
   <ul>

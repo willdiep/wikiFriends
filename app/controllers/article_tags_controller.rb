@@ -6,13 +6,21 @@ class ArticleTagsController < ApplicationController
             if @tag.valid?
                 @tag.save
                 @article_tag.tag = @tag
-                @article_tag.save
+                if @article_tag.save
+                redirect_to Article.find(params[:article_tag][:article_id])
+                else
+                    flash[:error] = @article_tag.errors.full_messages
+                    redirect_to Article.find(params[:article_tag][:article_id])
+                end
+            else
+                flash[:error] = @tag.errors.full_messages
                 redirect_to Article.find(params[:article_tag][:article_id])
             end
         else
             @article_tag = ArticleTag.create(tag_id: params[:article_tag][:tag_id], article_id: params[:article_tag][:article_id] )
             redirect_to Article.find(params[:article_tag][:article_id])
         end
+
     end
 
     private
