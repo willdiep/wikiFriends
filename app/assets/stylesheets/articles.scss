@@ -1,3 +1,25 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.comment {
+    color: 9f7e69;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgb(219, 167, 35);
+  }
+
+  .searchbar {
+    color: 9f7e69;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgb(231, 186, 37);
+    }
+    
+
+
+  div {
+    padding-top: 30px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+  }

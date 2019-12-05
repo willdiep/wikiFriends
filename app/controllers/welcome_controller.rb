@@ -1,7 +1,9 @@
 class WelcomeController < ApplicationController
 
     def home
-        render layout: false
+        if current_user
+            redirect_to "/users/#{current_user.id}"
+        end
     end
 
 end

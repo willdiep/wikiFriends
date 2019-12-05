@@ -12,8 +12,11 @@ class UsersController < ApplicationController
     end
 
     def new
+        if current_user
+            redirect_to "/users/#{current_user.id}"
+        else
         @user = User.new
-        render layout: false
+        end
     end
 
     def create
@@ -25,8 +28,6 @@ class UsersController < ApplicationController
             flash[:errors] = @user.errors.full_messages
             redirect_to 'new'
         end
-        render layout: false
-
     end
 
     def edit

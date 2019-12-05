@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
     def new
-      render layout: false
+      if current_user
+        redirect_to "/users/#{current_user.id}"
+      end
     end
   
     def create
