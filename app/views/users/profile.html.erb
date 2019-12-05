@@ -21,17 +21,17 @@
 
 <% @user.saved_articles.each do |sa| %>
     <p>
-        <%= sa.article.title %>: <%= sa.article.short_desc %>
+        <%= link_to sa.article.title, sa.article %>: <%= sa.article.short_desc %>
     </p>
 
     <p>
         Note: <%= sa.note %>
     </p>
 
-    <%= link_to "Visit #{sa.article.title} On Wikipedia", sa.article.url %>
+    Tags:
+    <% sa.article.tags.each do |t| %>
+        <%= t.name %>
+    <% end %>
 
     <br />
-    <br />
-
-
 <% end %>
