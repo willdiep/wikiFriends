@@ -11,8 +11,12 @@ class UsersController < ApplicationController
     end
 
     def new
+        if current_user
+            redirect_to "/users/#{current_user.id}"
+        else
         @user = User.new
         render layout: false
+        end
     end
 
     def create
