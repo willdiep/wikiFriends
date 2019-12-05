@@ -9,7 +9,7 @@ class Article < ApplicationRecord
 
 
     def self.search(search)
-        response = RestClient.get("https://en.wikipedia.org/w/api.php?action=opensearch&search=#{search}&limit=5&format=json")
+        response = RestClient.get("https://en.wikipedia.org/w/api.php?action=opensearch&search=#{search}&limit=10&format=json")
         results_hash = JSON.parse(response)
         articles = results_hash[1].map { |title| Article.find_or_create_by(title: title) }
         articles.each_with_index do |article, i|

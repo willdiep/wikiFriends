@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   post "/saved_articles", to: "saved_articles#create"
   post "/article_tags", to: "article_tags#create"
+  post "/articles/tags", to: "articles#index"
 end

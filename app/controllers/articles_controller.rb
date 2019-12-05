@@ -4,6 +4,10 @@ class ArticlesController < ApplicationController
         if params[:q] && params[:q] != ""
             Article.search(params[:q])
             @articles =  Article.all.select {|article| article.title.downcase.include?(params[:q].downcase)}
+        elsif params[:f] && params[:f] != "" && Tag.find_by(name: params[:f])
+            @articles = Article.all.select do |article| 
+                article.tags.include?(Tag.find_by(name: params[:f]))
+            end
         else
             @articles = Article.all
         end
