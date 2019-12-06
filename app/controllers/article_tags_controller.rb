@@ -17,7 +17,7 @@ class ArticleTagsController < ApplicationController
                 redirect_to Article.find(params[:article_tag][:article_id])
             end
         else
-            @article_tag = ArticleTag.create(tag_id: params[:article_tag][:tag_id], article_id: params[:article_tag][:article_id] )
+            @article_tag = ArticleTag.find_or_create_by(tag_id: params[:article_tag][:tag_id], article_id: params[:article_tag][:article_id] )
             redirect_to Article.find(params[:article_tag][:article_id])
         end
 
