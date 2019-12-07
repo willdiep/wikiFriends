@@ -1,7 +1,21 @@
-<h1> Welcome to WikiMEdia, a place to find exciting wikipedia articles! </h1>
 
-<h3> Please login or signup to get started! </h3>
 
-<p> <%=link_to "Login", login_path%> </p>
+<br />
+<br />
+<br />
+<br />
 
-<p> <%=link_to "Signup", signup_path%> </p>
+<article class="home__container container text-center">
+
+    <h1> Welcome to WikiFriends</h1> 
+
+    <h2>A Place To Find Exciting Wikipedia Articles!</h2>
+
+    <h4> Please login or sign up to get started! </h4>
+<br />
+
+    <p class="text-center"> <%=link_to "Login", login_path, class: "btn btn--home" %> </p>
+
+    <p class="text-center"> <%=link_to "Sign Up", signup_path, class: "btn btn--home" %> </p>
+
+</article><!-- ./container -->

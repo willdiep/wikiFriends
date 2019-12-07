@@ -2,16 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.dropdown>.dropdown-menu {
-  top: 200%;
-  transition: 0.3s all ease-in-out;
-}
-.dropdown:hover>.dropdown-menu {
-  display: block;
-  top: 100%;
+.home__container {
+  // display: grid;
+  // justify-content: center;
+  // align-items: center;
+
 }
 
-.dropdown>.dropdown-toggle:active {
-  /*Without this, clicking will make it sticky*/
-    pointer-events: none;
+.btn--home {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
+
+.btn--home:hover {
+  background-color: var(--secondary-color);
+  color: white;
+
+}
+
+
+// OVERRIDE DEFAULT
+
+.card {
+  padding: 0; 
+  border-color: var(--primary-color);
+}
+
+.badge-primary {
+  background-color: var(--secondary-color);
+}
+

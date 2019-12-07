@@ -1,20 +1,40 @@
+<article class="container">
 
-<div class="searchbar"; align=center> <%= form_with(url: "/search", method: "get", local: true) do %>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+
+
+<div class="searchbar"; align=center> 
+
+  <%= form_with(url: "/search", method: "get", local: true) do %>
     <%= label_tag(:q, "Search Articles by Title:") %>
     <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %> <br>
-  <%= label_tag(:f, "Search Articles by Tag:") %>
-  <%= text_field_tag(:f) %>
-  <%= submit_tag("Search") %> <Br>
-  <%= label_tag(:p, "Filter By Popular:") %>
-  <%= hidden_field_tag(:p) %>
-  <%= submit_tag("Filter") %> <Br>
+    <%= submit_tag("Search") %>
+    
+    <br>
+
+    <%= label_tag(:f, "Search Articles by Tag:") %>
+    <%= text_field_tag(:f) %>
+    <%= submit_tag("Search") %>
+  
+    <br>
+
+    <%= label_tag(:p, "Filter By Popular:") %>
+    <%= hidden_field_tag(:p) %>
+    <%= submit_tag("Filter") %> 
+  
+    <br>
+
   <% end %>
+
   <%= form_with(url: "/search", method: "get", local: true) do %>
-  <%= label_tag(:t, "Filter By Most Tagged:") %>
-  <%= hidden_field_tag(:t) %>
-  <%= submit_tag("Filter") %>
-<% end %>
+    <%= label_tag(:t, "Filter By Most Tagged:") %>
+    <%= hidden_field_tag(:t) %>
+    <%= submit_tag("Filter") %>
+  <% end %>
+
 </div>
 
   
@@ -26,3 +46,4 @@
     <% end %>
   </ul>
 
+</article
