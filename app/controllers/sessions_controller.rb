@@ -12,12 +12,12 @@ class SessionsController < ApplicationController
         redirect_to @user
       else  
         flash[:error] = "Invalid username or password."
-        redirect_to login_path
+        redirect_to "/login"
       end
     end
   
     def destroy
       session[:user_id] = nil
-      redirect_to login_path
+      redirect_to "/"
     end
   end

@@ -1,7 +1,16 @@
-<h1> Welcome to WikiMEdia, a place to find exciting wikipedia articles! </h1>
+<div class="welcome">
+<div align="center"; class="header"> 
+</div>
 
+<div align= "center"; class = "card"> 
+<h1> Welcome to WikiFriends </h1>
+
+<h3> It's Wikipedia, but with friends </h3>
 <h3> Please login or signup to get started! </h3>
 
-<p> <%=link_to "Login", login_path%> </p>
 
-<p> <%=link_to "Signup", signup_path%> </p>
+<%= button_to "Login", login_path, :method => "get" %> <br>
+<%= button_to "Signup", signup_path, :method => "get" %>
+
+</div>
+</div>

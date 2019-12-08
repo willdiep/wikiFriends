@@ -1,5 +1,6 @@
 
-<div class="searchbar"; align=center> <%= form_with(url: "/search", method: "get", local: true) do %>
+<div class="card"> 
+<%= form_with(url: "/search", method: "get", local: true) do %>
     <%= label_tag(:q, "Search Articles by Title:") %>
     <%= text_field_tag(:q) %>
     <%= submit_tag("Search") %> <br>
@@ -20,7 +21,7 @@
   
   <ul>
     <% @articles.each do |article| %>
-      <div class="list">
+      <div class="article_list">
         <li>  <%= link_to article.title, article %>: <%= article.short_desc %> </li>
         </div>
     <% end %>

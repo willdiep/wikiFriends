@@ -49,8 +49,7 @@ class UsersController < ApplicationController
 
         current_user.saved_articles.destroy_all
         current_user.saved_articles.reload
-        # byebug
-        current_user.reload.destroy
+        current_user.destroy
         
         session[:user_id] = nil
         redirect_to "/"

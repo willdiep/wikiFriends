@@ -1,10 +1,19 @@
+
+<div align="center">
 <% if flash[:error] %>
-    <h3> INVALID USERNAME OR PASSWORD </h3>
+    <h3> **Invalid Username or Password** </h3>
 <% end %>
+<br>
+</div>
+<div class="card">
+
+
+<h4> Login: </h4>
 <%= form_tag sessions_path do %>
-    <%= label_tag "Username" %>
-    <%= text_field_tag :username, nil, placeholder: "Username" %>
-    <%= label_tag "Password" %>
+    <%= label_tag "Username:" %>
+    <%= text_field_tag :username, nil, placeholder: "Username" %> <br>
+    <%= label_tag "Password:" %>
     <%= password_field_tag :password, nil, placeholder: "Password" %>
     <%= submit_tag "Log In"%>
 <% end %>
+</div>

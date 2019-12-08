@@ -3,23 +3,36 @@
 
 
 <br />
-
-<h1>Private Profile Page</h1>
+<div class="card">
+<h1>Your Private Profile</h1>
 
 <h1>
     Username: <%= @user.username %>
 </h1>
 
 <h2> 
-    User's Name: <%= @user.first_name %> <%= @user.last_name %>
+    Your name: <%= @user.first_name %> <%= @user.last_name %>
 </h2>
 
-  <%= link_to "Delete Account", @user, method: :delete, data: { confirm: "Confirm delete account?" } %>
+<%= link_to "Delete Account", @user, method: :delete, data: { confirm: "Confirm delete account?" } %>
+<%= link_to "Edit Account", edit_user_path(@user) %>
+<br />
 
-    <br />
-    <br />
+<% if @user.saved_articles == [] %>
+    <h4> You have no saved_articles :( </h4>
+    <h4><%=link_to "Add some articles here", "/articles" %> </h4>
+<% end %>
+<br>
 
+ 
+  
+    <br />
+</div>
+
+<h3> Your Saved Articles: </h3>
 <% @user.saved_articles.each do |sa| %>
+    <div class="article_list">
+
     <p>
         <%= link_to sa.article.title, sa.article %>: <%= sa.article.short_desc %>
     </p>
@@ -32,6 +45,6 @@
     <% sa.article.tags.each do |t| %>
         <%= t.name %>
     <% end %>
-
+    </div>
     <br />
 <% end %>
