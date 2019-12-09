@@ -8,7 +8,10 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-require("packs/login-signup-form")
+require("jquery");
+require("bootstrap");
+
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -16,3 +19,12 @@ require("packs/login-signup-form")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import "../src/main.scss";
+import "../src/users.scss";
+import "../src/util.scss";
+
+
+
+
+import "../src/custom.scss";
