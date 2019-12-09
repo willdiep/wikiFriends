@@ -1,28 +1,48 @@
 
-<%=form_for @user do |f| %>
-<div class="form-group">
-    <%=f.text_field :username, placeholder: "Username" %> <br>
 
-    <br />
 
-    <%=f.text_field :first_name, placeholder: "First Name" %> <br>
+    <%=form_for @user do |f| %>
 
-    <br />
+    <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-b-90">
+				<form class="login100-form validate-form flex-sb flex-w">
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+                        <%= f.text_field :username, placeholder: "Username",class: "input100" %>
+						<span class="focus-input100"></span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<%=f.text_field :first_name, placeholder: "First Name", class: "input100" %>
+						<span class="focus-input100"></span>
+					</div>
+					
+                    <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<%=f.text_field :last_name, placeholder: "Last Name",class: "input100" %>
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<%=f.password_field :password, placeholder: "Choose a password",class: "input100" %>
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						 <%=f.password_field :password_confirmation,placeholder: "Enter password again",class: "input100" %>
+						<span class="focus-input100"></span>
+					</div>
+					
 
-    <%=f.text_field :last_name, placeholder: "Last Name" %> <br>
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							Sign Up
+						</button>
+					</div>
 
-    <br />
-
-    <%=f.password_field :password, placeholder: "Choose a password" %> <br>
-
-    <br />
-
-    <%=f.password_field :password_confirmation,placeholder: "Enter password again" %> <br>
-
-    <br />
-
-    <%=f.submit nil, class: "btn btn--home" %>
- </div>
-
+				</form>
+			</div>
+		</div>
+	</div>
 <% end %>
-

@@ -1,49 +1,69 @@
+
+
 <article class="container">
+<br />
+<br />
+<br />
 
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
+<h1 class="text-center">Find Articles</h1>
+
+<br />
+<br />
+<br />
 
 
-<div class="searchbar"; align=center> 
+<section class="searchbar text-center"> 
 
-  <%= form_with(url: "/search", method: "get", local: true) do %>
-    <%= label_tag(:q, "Search Articles by Title:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-    
-    <br>
+  <div class="container">
+    <div class="row">
+        <div class="col">
+        <%= form_with(url: "/search", method: "get", local: true) do %>
+          <%= text_field_tag(:q, nil, placeholder: "Search Articles by Title") %>
+          <%= submit_tag("Search", class: "btn btn--search my-2 my-sm-0") %>
+          </div>
 
-    <%= label_tag(:f, "Search Articles by Tag:") %>
-    <%= text_field_tag(:f) %>
-    <%= submit_tag("Search") %>
-  
-    <br>
 
-    <%= label_tag(:p, "Filter By Popular:") %>
-    <%= hidden_field_tag(:p) %>
-    <%= submit_tag("Filter") %> 
-  
-    <br>
+        <div class="col">
+            <%= label_tag(:p, "Filter By Popular:") %>
+            <%= hidden_field_tag(:p) %>
+            <%= submit_tag("Filter", class: "btn btn--search my-2 my-sm-0") %> 
+          </div>
+        </div>
 
-  <% end %>
+        <br />
+        
+        <div class="row">
+          <div class="col">
+            <%= text_field_tag(:f, nil, placeholder: "Search Articles by Tag") %>
+            <%= submit_tag("Search", class: "btn btn--search my-2 my-sm-0") %>
 
-  <%= form_with(url: "/search", method: "get", local: true) do %>
-    <%= label_tag(:t, "Filter By Most Tagged:") %>
-    <%= hidden_field_tag(:t) %>
-    <%= submit_tag("Filter") %>
-  <% end %>
+          <% end %>
+        </div>
 
-</div>
+        <div class="col">
+          <%= form_with(url: "/search", method: "get", local: true) do %>
+            <%= label_tag(:t, "Filter By Most Tagged:") %>
+            <%= hidden_field_tag(:t) %>
+            <%= submit_tag("Filter", class: "btn btn--search my-2 my-sm-0") %>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</section>
 
-  
-  <ul>
+<br />
+<br />
+
+<section>
+  <ul class="list-group article__list">
     <% @articles.each do |article| %>
       <div class="list">
-        <li>  <%= link_to article.title, article %>: <%= article.short_desc %> </li>
+        <li class="list-group-item article__results">  <%= link_to article.title, article %>: <%= article.short_desc %> </li>
         </div>
+
+        <br />
     <% end %>
   </ul>
+</section>
 
 </article

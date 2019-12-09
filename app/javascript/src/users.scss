@@ -17,11 +17,11 @@
     font-size: 1em;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    &:hover {
+       background-color: var(--secondary-color);
+       color: white;
+     
+     }
   }
   
-  .btn--home:hover {
-    background-color: var(--secondary-color);
-    color: white;
-  
-  }
   

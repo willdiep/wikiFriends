@@ -46,4 +46,24 @@ input[type=text]:focus, input[type=password]:focus{
 background-color: var(--secondary-color);
 }
 
-  
+
+
+
+.article__results, .user__results {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1em;
+  padding: 25px;
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+.btn--search {
+  background-color: var(--primary-color);
+  color: white;
+  &:hover {
+     background-color: var(--secondary-color);
+     color: white;
+   
+   }
+}

@@ -395,15 +395,12 @@ iframe {
   }
 }
 
-
-
 </style>
+	
 	
 	
 <article class="container">	
 
-
-</div>
 
 <% if flash[:error] %>
 	<div class="alert alert-danger" role="alert">
@@ -423,14 +420,14 @@ iframe {
 
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
-						<span class="focus-input100"></span>
 						<%= text_field_tag :username, nil, placeholder: "Username", class: "input100" %>
+						<span class="focus-input100"></span>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-						<span class="focus-input100"></span>
 						<%= password_field_tag :password, nil, placeholder: "Password", class: "input100" %>
+						<span class="focus-input100"></span>
 					</div>
 					
 					<div class="flex-sb-m w-full p-t-3 p-b-24">

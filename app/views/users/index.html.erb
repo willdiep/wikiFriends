@@ -1,7 +1,22 @@
-<h1> See other users on WikiFriends </h1>
+<article class="container">
 
-<ul>
+<br />
+<br />
+<br />
+
+
+<h1 class='text-center'> See other users on WikiFriends </h1>
+
+<br />
+<br />
+<br />
+
+<ul class=list-group>
 <% @users.each do |user| %>
-    <li> <%=link_to user.username, user %> </li>
+    <li class="list-group-item user__results"> <%=link_to user.username, user %> </li>
     <% end %>
-    </ul>
+</ul>
+
+
+
+</article>
