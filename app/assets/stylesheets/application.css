@@ -305,22 +305,30 @@
     width:80%;
 }
 
+nav {
+  height: 90px;
+}
+
 #navbarNavDropdown {
   padding-left: 0;
 }
 
- .dropdown>.dropdown-menu {
-    top: 200%;
-    transition: 0.3s all ease-in-out;
-  }
-  .dropdown:hover>.dropdown-menu {
-    display: block;
-    top: 100%;
-  }
-  
-  .dropdown>.dropdown-toggle:active {
-    /*Without this, clicking will make it sticky*/
-      pointer-events: none;
-  }
-  
+input[type=text]:focus, input[type=password]:focus{
+  outline: 2px solid var(--primary-color);  
+}
+
+.dropdown>.dropdown-menu {
+  top: 200%;
+  transition: 0.3s all ease-in-out;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+  top: 100%;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
  

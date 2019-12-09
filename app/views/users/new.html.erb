@@ -1,4 +1,14 @@
-<h1> Create a new WikiMEdia user: </h1>
+<br />
+<br />
+<br />
+
+<article class="text-center">
+
+<h1> Create a new WikiFriends account: </h1>
+
+<br />
+
+
 <%if flash[:errors] %>
     <% flash[:errors].each do |error| %>
         **<%= error %> <br>
@@ -6,3 +16,5 @@
 
         <%end %>
 <%= render 'form' %>
+
+</article>

@@ -1,19 +1,28 @@
+
 <%=form_for @user do |f| %>
-    <%=f.label :username %>
-    <%=f.text_field :username %> <br>
+<div class="form-group">
+    <%=f.text_field :username, placeholder: "Username" %> <br>
 
-    <%=f.label :first_name %>
-    <%=f.text_field :first_name %> <br>
+    <br />
 
-    <%=f.label :last_name %>
-    <%=f.text_field :last_name %> <br>
+    <%=f.text_field :first_name, placeholder: "First Name" %> <br>
 
-    <%=f.label :password %>
-    <%=f.password_field :password %> <br>
+    <br />
 
-    <%=f.label :password_confirmation %>
-    <%=f.password_field :password_confirmation %> <br>
+    <%=f.text_field :last_name, placeholder: "Last Name" %> <br>
 
-    <%=f.submit %>
-<%end %>
+    <br />
+
+    <%=f.password_field :password, placeholder: "Choose a password" %> <br>
+
+    <br />
+
+    <%=f.password_field :password_confirmation,placeholder: "Enter password again" %> <br>
+
+    <br />
+
+    <%=f.submit nil, class: "btn btn--home" %>
+ </div>
+
+<% end %>
 
