@@ -1,8 +1,10 @@
 <p>Tags:
     <% @article.tags.each do |tag| %>
-    - -<%=tag.name%>- -
+
+    <span class="badge badge-pill badge-primary"><%= tag.name %></span>
     <% end %>
 </p>
+
 <% @article_tag.article_id = @article.id %>
 <% if flash[:error] %>
        <p>ERROR: <% flash[:error].each do |error| %> 
@@ -12,10 +14,11 @@
 <% end %>
 <%=form_for @article_tag do |f| %>
     <%= f.hidden_field :article_id%> <br>
-    <%=f.collection_select :tag_id, Tag.all, :id, :name %>
-    <%=f.submit "Add Tag"%> <br>
+    <%=f.collection_select :tag_id, Tag.all, :id, :name%>
+    <%=f.submit "Add Tag", class: "btn btn--search my-2 my-sm-0" %> 
+    <br>
     <%=f.fields_for :tag do |f| %> 
         <%=f.text_field :name %>
         <% end %>
-    <%=f.submit "Create New Tag"%>
+    <%=f.submit "Create New Tag", class: "btn btn--search my-2 my-sm-0" %>
         <%end%>

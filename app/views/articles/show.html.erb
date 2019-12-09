@@ -1,40 +1,73 @@
-<h1>  <%= @article.title %> </h1>
+<article class="container">
+
+<br />
+<br />
+<br />
+
+<h1 class="text-center text__underline">Article</h1>
+
+<br />
+<br />
+<br />
+
+<h2>  <%= @article.title %> </h2>
 
 <p>  <%= @article.short_desc %> </p>
 
 <%= link_to "Visit #{@article.title} On Wikipedia", @article.url %>
 
+<br />
+<br />
+
 <%= render 'tags' %>
+
+<br />
+<br />
 
 <iframe name="Framename" src="<%= @article.url %>" width="100%" height="500px" frameborder="0" scrolling="auto" class="frame-area">
 </iframe>
 
+<br />
+<br />
+<br />
+
 <% if @article.users.include?(current_user) %>
-    <h4> Edit Your Note: </h4>
+    <h3> Edit Your Note: </h4>
+<div class="form-group">
     <% @saved_article = current_user.saved_articles.find{ |sa| sa.article == @article} %>
     <%= form_for @saved_article do |f| %>
-        <%= f.text_area :note%> <br>    
+        <%= f.text_area :note, class: "form-control" %> 
+        <br>    
         <%= f.hidden_field :id%> 
         <%= f.hidden_field :article_id%> 
-        <%= f.submit "Update Article Note"%>
+        <%= f.submit "Update Article Note", class: "btn btn--search my-2 my-sm-0"%>
     <% end %>  
-    <%= link_to "Unsave Article", @saved_article, method: :delete, data: { confirm: "Unsave this article and delete your note?" } %>
+</div>
+    <%= button_to "Unsave Article", @saved_article, method: :delete, data: { confirm: "Unsave this article and delete your note?", class: "btn btn-danger" } %>
 <% else %>
         <% @saved_article.article_id = @article.id %>
         <%= form_for @saved_article do |f| %>
             <%= f.text_area :note, placeholder: "Write your note about this article here" %> <br>
             <%= f.hidden_field :article_id%> <br>
-            <%= f.submit "Save to My Articles"%>
+            <%= f.submit "Save to My Articles", class: "btn btn--search my-2 my-sm-0" %>
         <% end %>   
     <% end %>
+
     <br>
     <br>
 
     <h3> Comments: </h3>
-<% @article.saved_articles.each do |sa| %>
-    <div class="comment"> <%="#{sa.user.username}: #{sa.note}" %>
-    </div>
-    <br>
-    <%end %>
+    <ul class=list-group>
 
+        <% @article.saved_articles.each do |sa| %>
+            <div class="comment"> 
+                <li class="list-group-item">
+                    <strong><%= "#{sa.user.username}" %>:</strong>
+                    <%= "#{sa.note}" %>
+                </li>
+            </div>
+            <br>
+        <%end %>
+    </ul>
 
+</article>
