@@ -1,2 +1,2 @@
 # README
-See this website Live at https://wikifriends.herokuapp.com/
+See this website live at https://wikifriends.herokuapp.com/
