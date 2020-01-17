@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_12_03_012059) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "article_tags", force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "tag_id", null: false
